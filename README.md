@@ -22,6 +22,7 @@ Rancangan memecahnya menjadi 15 pertanyaan (10 Utama, 4 Pendukung, 1 Tambahan) d
 ## 2. Data
 
 - Sumber: dataset weatherAUS di Kaggle, pengamatan cuaca harian dari Bureau of Meteorology Australia.
+- Link dataset: [here](https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package) (Versi: 2, Tanggal akses: 23 Oktober 2026).
 - Ukuran (perkiraan, **belum diverifikasi**): ±145 ribu baris, ±49 lokasi, 23 kolom, periode sekitar 2007 sampai 2017. Angka ini dicek saat data diunduh.
 - Lisensi dan sitasi: dicek di halaman dataset sebelum project dipublikasikan.
 - Data mentah tidak di-commit ke repository. Cara mengunduhnya akan ditulis di `data/README.md`.
@@ -52,6 +53,9 @@ Belum dikerjakan. Ketepatan aturan praktis akan dilaporkan dengan label `estimat
 ```
 index.html   Halaman rancangan project (bisa dibuka di browser atau lewat GitHub Pages)
 README.md    Dokumen ini
+src/         Sumber halaman: body.html, script.js, template.html, build.py
 ```
+
+Untuk membangun ulang `index.html` setelah mengubah `src/body.html` atau `src/script.js`: `cd src && python3 -I build.py`.
 
 Folder `sql/`, `scripts/`, `dashboard/`, dan `outputs/` ditambahkan saat pengerjaan dimulai.
