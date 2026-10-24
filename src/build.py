@@ -30,19 +30,17 @@ css='''.row .bl{position:absolute;top:0;bottom:0;width:2px;background:var(--rose
 .wrow{position:relative;display:grid;gap:30px}
 .wrow::after{content:"\\2193";position:absolute;left:50%;bottom:-27px;transform:translateX(-50%);font-size:24px;font-weight:800;color:var(--bar);line-height:1}
 @media (min-width:1200px){.wrow{grid-template-columns:2fr 3fr;gap:44px}.wrow .ws{grid-template-columns:repeat(var(--k),minmax(0,1fr))}.wrow .wl:first-child::after{content:"\\2192";left:auto;right:-36px;bottom:auto;top:50%;transform:translateY(-50%)}}
-.tabs{display:contents}.tab{flex:none;font:inherit;font-size:15px;font-weight:800;cursor:pointer;background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 16px}
+.tab{flex:none;font:inherit;font-size:15px;font-weight:800;cursor:pointer;background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 16px}
 .tab[data-t=design]{--c:var(--navy)}.tab[data-t=report]{--c:var(--teal)}
 .tab:hover{border-color:var(--c)}.tab.on{background:var(--c);border-color:var(--c);color:#fff}.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 .links{display:contents}.links[data-tab=design]{--ac:var(--navy)}.links[data-tab=report]{--ac:var(--teal)}
 .links a{font-size:13.5px;font-weight:600;color:var(--mut);padding:5px 12px}
-.sep{flex:none;width:2px;background:var(--line);margin:4px 4px}
 .pane code{font-size:.92em;background:var(--sub);border-radius:4px;padding:1px 5px}
 .callout a{color:inherit;font-weight:700;text-decoration:underline}
 @media (min-width:1280px){
-.tabs{display:flex;flex-direction:column;gap:8px;padding-bottom:14px}
+main>nav{gap:8px}
 .tab{border-radius:12px;font-size:16px;padding:12px 16px;text-align:left;border-left:8px solid var(--c)}
-.sep{display:none}
-.links{display:flex;flex-direction:column;gap:2px;margin-left:12px;padding-left:12px;border-left:3px solid var(--ac)}
+.links{display:flex;flex-direction:column;gap:2px;margin:0 0 8px 12px;padding-left:12px;border-left:3px solid var(--ac)}
 main>nav .links a{background:none;border:0;border-radius:8px;font-size:14.5px;font-weight:600;color:var(--mut);padding:6px 10px}
 main>nav .links a:hover,main>nav .links a:focus-visible{background:var(--soft);color:var(--head)}
 }

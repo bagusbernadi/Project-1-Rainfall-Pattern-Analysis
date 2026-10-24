@@ -162,26 +162,24 @@ main>nav a{border-radius:10px;font-size:15px;padding:8px 14px}
 .wrow{position:relative;display:grid;gap:30px}
 .wrow::after{content:"\2193";position:absolute;left:50%;bottom:-27px;transform:translateX(-50%);font-size:24px;font-weight:800;color:var(--bar);line-height:1}
 @media (min-width:1200px){.wrow{grid-template-columns:2fr 3fr;gap:44px}.wrow .ws{grid-template-columns:repeat(var(--k),minmax(0,1fr))}.wrow .wl:first-child::after{content:"\2192";left:auto;right:-36px;bottom:auto;top:50%;transform:translateY(-50%)}}
-.tabs{display:contents}.tab{flex:none;font:inherit;font-size:15px;font-weight:800;cursor:pointer;background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 16px}
+.tab{flex:none;font:inherit;font-size:15px;font-weight:800;cursor:pointer;background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 16px}
 .tab[data-t=design]{--c:var(--navy)}.tab[data-t=report]{--c:var(--teal)}
 .tab:hover{border-color:var(--c)}.tab.on{background:var(--c);border-color:var(--c);color:#fff}.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 .links{display:contents}.links[data-tab=design]{--ac:var(--navy)}.links[data-tab=report]{--ac:var(--teal)}
 .links a{font-size:13.5px;font-weight:600;color:var(--mut);padding:5px 12px}
-.sep{flex:none;width:2px;background:var(--line);margin:4px 4px}
 .pane code{font-size:.92em;background:var(--sub);border-radius:4px;padding:1px 5px}
 .callout a{color:inherit;font-weight:700;text-decoration:underline}
 @media (min-width:1280px){
-.tabs{display:flex;flex-direction:column;gap:8px;padding-bottom:14px}
+main>nav{gap:8px}
 .tab{border-radius:12px;font-size:16px;padding:12px 16px;text-align:left;border-left:8px solid var(--c)}
-.sep{display:none}
-.links{display:flex;flex-direction:column;gap:2px;margin-left:12px;padding-left:12px;border-left:3px solid var(--ac)}
+.links{display:flex;flex-direction:column;gap:2px;margin:0 0 8px 12px;padding-left:12px;border-left:3px solid var(--ac)}
 main>nav .links a{background:none;border:0;border-radius:8px;font-size:14.5px;font-weight:600;color:var(--mut);padding:6px 10px}
 main>nav .links a:hover,main>nav .links a:focus-visible{background:var(--soft);color:var(--head)}
 }
 </style>
 
 <main>
-<nav aria-label="Project navigation"><div class="tabs" role="tablist" aria-label="Jenis halaman project"><button type="button" role="tab" class="tab on" data-t="design" aria-selected="true" aria-controls="design">Design Project</button><button type="button" role="tab" class="tab" data-t="report" aria-selected="false" aria-controls="report">Report Project</button><span class="sep" aria-hidden="true"></span></div><div class="links" data-tab="design"><a href="#s1">Background</a><a href="#s2">Business Questions</a><a href="#s3">Rain Signals &amp; Simple Rule</a><a href="#s4">Dataset</a><a href="#s5">Tools</a><a href="#s6">Work Plan</a><a href="#s7">Project Outputs</a><a href="#s8">Success Criteria</a><a href="#s9">Assumptions &amp; Limitations</a></div><div class="links" data-tab="report" hidden><a href="#rp1">Problem</a><a href="#rp2">Data</a><a href="#rp3">Analysis</a><a href="#rp4">Recommendation</a><a href="#rp5">Impact</a><a href="#rp6">Batasan</a></div></nav>
+<nav aria-label="Project navigation"><button type="button" class="tab on" data-t="design" aria-expanded="true" aria-controls="design">Design Project</button><div class="links" data-tab="design"><a href="#s1">Background</a><a href="#s2">Business Questions</a><a href="#s3">Rain Signals &amp; Simple Rule</a><a href="#s4">Dataset</a><a href="#s5">Tools</a><a href="#s6">Work Plan</a><a href="#s7">Project Outputs</a><a href="#s8">Success Criteria</a><a href="#s9">Assumptions &amp; Limitations</a></div><button type="button" class="tab" data-t="report" aria-expanded="false" aria-controls="report">Report Project</button><div class="links" data-tab="report" hidden><a href="#rp1">Problem</a><a href="#rp2">Data</a><a href="#rp3">Analysis</a><a href="#rp4">Recommendation</a><a href="#rp5">Impact</a><a href="#rp6">Batasan</a></div></nav>
 
 <header class="banner"><h1>Project 1: Rainfall Pattern Analysis (weatherAUS, tanpa ML)</h1>
 <p class="goal"><b>Tujuan project:</b> membangun analisis deskriptif (tanpa machine learning) yang menunjukkan kapan dan di lokasi mana hujan paling sering terjadi, serta kondisi cuaca apa yang mendahului hujan keesokan harinya, lengkap dengan catatan keputusan untuk data kosong, sehingga dapat disusun aturan praktis sederhana dan jadwal kegiatan luar ruang yang berbasis data.</p>
@@ -526,7 +524,7 @@ document.querySelectorAll('.fb').forEach(x=>x.classList.toggle('on',x==b));let t
 [...qg.children].forEach(el=>{if(el.classList.contains('theme')){if(th)th.hidden=!vis;th=el;vis=0}else{const show=f=='*'||el.dataset.p==f;el.hidden=!show;if(show)vis++}});if(th)th.hidden=!vis};
 let seen=new Set();document.querySelectorAll('main>.pane>*').forEach(el=>{if(el.tagName=='H2')seen=new Set();hl(el,seen)});
 const TB=[...document.querySelectorAll('.tab')];
-function setTab(t){document.querySelectorAll('.pane,.links').forEach(e=>e.hidden=e.dataset.tab!==t);TB.forEach(x=>{const on=x.dataset.t===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)})}
+function setTab(t){document.querySelectorAll('.pane,.links').forEach(e=>e.hidden=e.dataset.tab!==t);TB.forEach(x=>{const on=x.dataset.t===t;x.classList.toggle('on',on);x.setAttribute('aria-expanded',on)})}
 function route(){const h=decodeURIComponent(location.hash.slice(1)),el=h&&document.getElementById(h);
 if(h=='design'||h=='report'){setTab(h);scrollTo(0,0);return}
 if(el){const p=el.closest('.pane');if(p){setTab(p.dataset.tab);el.scrollIntoView()}}}
