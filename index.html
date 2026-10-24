@@ -162,15 +162,22 @@ main>nav a{border-radius:10px;font-size:15px;padding:8px 14px}
 .wrow{position:relative;display:grid;gap:30px}
 .wrow::after{content:"\2193";position:absolute;left:50%;bottom:-27px;transform:translateX(-50%);font-size:24px;font-weight:800;color:var(--bar);line-height:1}
 @media (min-width:1200px){.wrow{grid-template-columns:2fr 3fr;gap:44px}.wrow .ws{grid-template-columns:repeat(var(--k),minmax(0,1fr))}.wrow .wl:first-child::after{content:"\2192";left:auto;right:-36px;bottom:auto;top:50%;transform:translateY(-50%)}}
+.tabs{display:contents}.tab{flex:none;font:inherit;font-size:var(--small);font-weight:700;cursor:pointer;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px}
+.tab:hover{border-color:var(--bar)}.tab.on{background:var(--navy);border-color:var(--navy);color:#fff}.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.links{display:contents}.sep{flex:none;width:1px;background:var(--line);margin:4px 2px}
+.callout a{color:inherit;font-weight:700;text-decoration:underline}
+.pane code{font-size:.92em;background:var(--sub);border-radius:4px;padding:1px 5px}
+@media (min-width:1280px){.tabs{display:flex;flex-direction:column;gap:6px;padding-bottom:10px;margin-bottom:4px;border-bottom:1px solid var(--line)}.tab{border-radius:10px;font-size:15px;padding:8px 14px;text-align:left}.sep{display:none}}
 </style>
 
 <main>
-<nav aria-label="Section navigation"><a href="#s1">Background</a><a href="#s2">Business Questions</a><a href="#s3">Rain Signals &amp; Simple Rule</a><a href="#s4">Dataset</a><a href="#s5">Tools</a><a href="#s6">Work Plan</a><a href="#s7">Project Outputs</a><a href="#s8">Success Criteria</a><a href="#s9">Assumptions &amp; Limitations</a></nav>
+<nav aria-label="Project navigation"><div class="tabs" role="tablist" aria-label="Jenis halaman project"><button type="button" role="tab" class="tab on" data-t="design" aria-selected="true" aria-controls="design">Design Project</button><button type="button" role="tab" class="tab" data-t="report" aria-selected="false" aria-controls="report">Report Project</button><span class="sep" aria-hidden="true"></span></div><div class="links" data-tab="design"><a href="#s1">Background</a><a href="#s2">Business Questions</a><a href="#s3">Rain Signals &amp; Simple Rule</a><a href="#s4">Dataset</a><a href="#s5">Tools</a><a href="#s6">Work Plan</a><a href="#s7">Project Outputs</a><a href="#s8">Success Criteria</a><a href="#s9">Assumptions &amp; Limitations</a></div><div class="links" data-tab="report" hidden><a href="#rp1">Problem</a><a href="#rp2">Data</a><a href="#rp3">Analysis</a><a href="#rp4">Recommendation</a><a href="#rp5">Impact</a><a href="#rp6">Batasan</a></div></nav>
 
 <header class="banner"><h1>Project 1: Rainfall Pattern Analysis (weatherAUS, tanpa ML)</h1>
 <p class="goal"><b>Tujuan project:</b> membangun analisis deskriptif (tanpa machine learning) yang menunjukkan kapan dan di lokasi mana hujan paling sering terjadi, serta kondisi cuaca apa yang mendahului hujan keesokan harinya, lengkap dengan catatan keputusan untuk data kosong, sehingga dapat disusun aturan praktis sederhana dan jadwal kegiatan luar ruang yang berbasis data.</p>
 <div class="tags"><span class="tlab">Kategori:</span><span class="tag a">Rancangan project</span><span class="tag c1">Cuaca / lingkungan</span><span class="tag c2">Dataset publik weatherAUS</span><span class="tag c3">SQL + pandas + dashboard</span><span class="tag c4">Tingkat: Mudah</span></div></header>
 
+<div class="pane" id="design" data-tab="design">
 <section class="card intro">
 <h3>Project Introduction</h3>
 <p>Bayangkan Pak RT yang mencatat cuaca di buku tulis setiap hari selama 10 tahun, di puluhan kampung sekaligus. Setiap hari ia menulis suhu, kelembapan, tekanan udara, berapa milimeter air di penakar hujan, dan apakah besok turun hujan. Sebagian halaman tidak terisi karena alatnya rusak atau ia lupa.</p>
@@ -434,6 +441,50 @@ main>nav a{border-radius:10px;font-size:15px;padding:8px 14px}
 <p><b>Akurasi bisa menyesatkan.</b> Hari hujan jauh lebih sedikit daripada hari tidak hujan, sehingga akurasi dibaca bersama recall dan proporsi hari bertanda peringatan.</p>
 <p><b>Data berurutan.</b> Hari-hari berdekatan di satu lokasi saling terkait, jadi baris tidak sepenuhnya independen. Kesimpulan dilaporkan sebagai pola, bukan pengujian statistik.</p>
 <p><b>Cakupan data tidak merata.</b> Periode dan kolom terisi bisa berbeda antar lokasi, dan data berakhir sekitar 2017, sehingga hasilnya tidak menggambarkan kondisi terbaru.</p></details></div></div>
+</div>
+
+<div class="pane" id="report" data-tab="report" hidden>
+<div class="callout a"><h4>Status Report Project</h4><p>Laporan hasil diisi setelah analisis dikerjakan. Saat ini hanya Problem dan Data yang sudah ditulis, sedangkan Analysis, Recommendation, dan Impact masih kosong. Rancangan lengkap ada di tab <a href="#design">Design Project</a>.</p></div>
+<div class="scroll"><table><tr><th>Bagian</th><th>Status</th><th>Diisi setelah</th></tr>
+<tr><td><b>Problem</b></td><td><span class="pill">Draft</span></td><td>Sudah ditulis dari rancangan</td></tr>
+<tr><td><b>Data</b></td><td><span class="pill">Draft</span></td><td>Langkah 3: ukuran dataset diverifikasi</td></tr>
+<tr><td><b>Analysis</b></td><td><span class="pill d">Belum dikerjakan</span></td><td>Langkah 6 sampai 10</td></tr>
+<tr><td><b>Recommendation</b></td><td><span class="pill d">Belum dikerjakan</span></td><td>Langkah 8 dan 11</td></tr>
+<tr><td><b>Impact</b></td><td><span class="pill d">Belum dikerjakan</span></td><td>Langkah 8 sampai 10</td></tr>
+<tr><td><b>Batasan</b></td><td><span class="pill">Draft</span></td><td>Diperbarui setelah audit nilai kosong (langkah 4)</td></tr>
+</table></div>
+
+<h2 id="rp1">1. Problem<small>Pertanyaan yang ingin dijawab</small></h2>
+<div class="card"><p><b>Pertanyaan utama:</b> Kapan (musim atau bulan) dan di lokasi mana hujan paling sering terjadi, dan kondisi cuaca apa yang paling terkait dengan hujan keesokan harinya?</p>
+<p>Pertanyaan ini dipecah menjadi 15 pertanyaan (10 Utama, 4 Pendukung, 1 Tambahan) dalam 6 tema: pola waktu, lokasi, kondisi cuaca, hari ini dan besok, penerapan, serta data kosong dan validitas. Daftar lengkap ada di <a href="#s2">bagian 2 Design Project</a>.</p></div>
+
+<h2 id="rp2">2. Data<small>Sumber, ukuran, dan perlakuan awal</small></h2>
+<div class="card"><ul class="tight">
+<li><b>Sumber:</b> dataset weatherAUS di Kaggle, pengamatan cuaca harian dari Bureau of Meteorology Australia. Link dataset: <a href="https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package" target="_blank" rel="noopener">here</a> (Versi: 2, Tanggal akses: 23 Oktober 2026).</li>
+<li><b>Ukuran (perkiraan, belum diverifikasi):</b> ±145 ribu baris, ±49 lokasi, 23 kolom, periode sekitar 2007 sampai 2017. Angka ini dicek saat data diunduh.</li>
+<li><b>Lisensi dan sitasi:</b> dicek di halaman dataset sebelum project dipublikasikan.</li>
+<li><b>Data mentah</b> tidak di-commit ke repository. Cara mengunduhnya akan ditulis di <code>data/README.md</code>.</li>
+<li><b>Rencana tabel:</b> weather_raw, weather_clean, dim_location, missing_audit.</li>
+<li><b>Perlakuan nilai kosong (usulan awal):</b> dibandingkan dua skenario, baris kosong dibuang (dropna) dan diisi median per lokasi dan bulan. Keputusan final dicatat setelah audit.</li>
+</ul></div>
+
+<h2 id="rp3">3. Analysis<small>Hasil perhitungan dari data</small></h2>
+<div class="card"><p><span class="pill d" style="margin:0 6px 0 0">Belum dikerjakan</span>Rencana langkah (12 langkah, tahap A sampai D) ada di <a href="#s6">bagian 6 Design Project</a>. Semua angka nanti dihitung dari data dengan SQL dan dicek silang dengan pandas.</p></div>
+
+<h2 id="rp4">4. Recommendation<small>Tindakan yang disarankan dari temuan</small></h2>
+<div class="card"><p><span class="pill d" style="margin:0 6px 0 0">Belum dikerjakan</span>Output yang direncanakan: aturan praktis berbasis ambang Humidity3pm yang dibandingkan dengan baseline "selalu tidak hujan", dan jadwal kegiatan luar ruang per lokasi.</p></div>
+
+<h2 id="rp5">5. Impact<small>Seberapa besar manfaatnya</small></h2>
+<div class="card"><p><span class="pill d" style="margin:0 6px 0 0">Belum dikerjakan</span>Ketepatan aturan praktis akan dilaporkan dengan label estimated. Angka pada simulasi di <a href="#s3">bagian 3 Design Project</a> adalah angka contoh dan bukan hasil dari data weatherAUS.</p></div>
+
+<h2 id="rp6">6. Batasan yang sudah diketahui<small>Hal yang perlu diwaspadai saat membaca hasil</small></h2>
+<div class="card"><ul class="tight">
+<li><b>Pola belum tentu penyebab.</b> Analisis ini tidak menguji sebab-akibat.</li>
+<li><b>Akurasi bisa menyesatkan</b> karena hari hujan jauh lebih sedikit daripada hari tidak hujan, jadi dibaca bersama recall dan proporsi hari bertanda peringatan.</li>
+<li><b>Hari-hari berdekatan saling terkait,</b> sehingga baris data tidak sepenuhnya independen.</li>
+<li><b>Periode dan kolom terisi</b> bisa berbeda antar lokasi, dan data berakhir sekitar 2017.</li>
+</ul></div>
+</div>
 </main>
 
 <script>
@@ -463,7 +514,14 @@ addEventListener('scroll',()=>tip.style.display='none',{passive:true});
 const qg=$('qg');document.querySelector('.fbar').onclick=e=>{const b=e.target.closest('.fb');if(!b)return;const f=b.dataset.f;
 document.querySelectorAll('.fb').forEach(x=>x.classList.toggle('on',x==b));let th=null,vis=0;
 [...qg.children].forEach(el=>{if(el.classList.contains('theme')){if(th)th.hidden=!vis;th=el;vis=0}else{const show=f=='*'||el.dataset.p==f;el.hidden=!show;if(show)vis++}});if(th)th.hidden=!vis};
-let seen=new Set();[...document.querySelector('main').children].forEach(el=>{if(el.tagName=='H2')seen=new Set();hl(el,seen)});
+let seen=new Set();document.querySelectorAll('main>.pane>*').forEach(el=>{if(el.tagName=='H2')seen=new Set();hl(el,seen)});
+const TB=[...document.querySelectorAll('.tab')];
+function setTab(t){document.querySelectorAll('.pane,.links').forEach(e=>e.hidden=e.dataset.tab!==t);TB.forEach(x=>{const on=x.dataset.t===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)})}
+function route(){const h=decodeURIComponent(location.hash.slice(1)),el=h&&document.getElementById(h);
+if(h=='design'||h=='report'){setTab(h);scrollTo(0,0);return}
+if(el){const p=el.closest('.pane');if(p){setTab(p.dataset.tab);el.scrollIntoView()}}}
+TB.forEach(x=>x.onclick=()=>{location.hash=x.dataset.t});
+addEventListener('hashchange',route);route();
 </script>
 
 </body></html>

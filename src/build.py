@@ -30,6 +30,12 @@ css='''.row .bl{position:absolute;top:0;bottom:0;width:2px;background:var(--rose
 .wrow{position:relative;display:grid;gap:30px}
 .wrow::after{content:"\\2193";position:absolute;left:50%;bottom:-27px;transform:translateX(-50%);font-size:24px;font-weight:800;color:var(--bar);line-height:1}
 @media (min-width:1200px){.wrow{grid-template-columns:2fr 3fr;gap:44px}.wrow .ws{grid-template-columns:repeat(var(--k),minmax(0,1fr))}.wrow .wl:first-child::after{content:"\\2192";left:auto;right:-36px;bottom:auto;top:50%;transform:translateY(-50%)}}
+.tabs{display:contents}.tab{flex:none;font:inherit;font-size:var(--small);font-weight:700;cursor:pointer;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px}
+.tab:hover{border-color:var(--bar)}.tab.on{background:var(--navy);border-color:var(--navy);color:#fff}.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.links{display:contents}.sep{flex:none;width:1px;background:var(--line);margin:4px 2px}
+.callout a{color:inherit;font-weight:700;text-decoration:underline}
+.pane code{font-size:.92em;background:var(--sub);border-radius:4px;padding:1px 5px}
+@media (min-width:1280px){.tabs{display:flex;flex-direction:column;gap:6px;padding-bottom:10px;margin-bottom:4px;border-bottom:1px solid var(--line)}.tab{border-radius:10px;font-size:15px;padding:8px 14px;text-align:left}.sep{display:none}}
 </style>'''
 L=open('template.html',encoding='utf8').read().split('\n')
 head0='\n'.join(L[:150]).replace('<title>Project 3: Yield, Rework &amp; Defect Tracking</title>','<title>Project 1: Rainfall Pattern Analysis</title>').replace('Rancangan project portofolio Data Analyst: sistem pelacakan yield, rework, dan defect produksi PLC Splitter dengan SQL dan dashboard.','Rancangan project portofolio Data Analyst: analisis pola hujan dataset weatherAUS tanpa machine learning dengan SQL, pandas, dan dashboard HTML.')
