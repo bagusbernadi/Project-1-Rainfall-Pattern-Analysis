@@ -1,0 +1,17 @@
+metric,dropna_A,impute_B,diff_B_minus_A,rel_diff_pct,n_A,n_B,same_direction,flag_review
+Selisih Humidity3pm (Yes - No),22.289,21.923,-0.366,-1.64,138583,142193,True,False
+Selisih Pressure3pm (Yes - No),-3.813,-3.743,0.07,1.83,128212,130412,True,False
+Selisih Sunshine (Yes - No),-4.075,-3.568,0.506,12.43,74377,90122,True,True
+Selisih Cloud3pm (Yes - No),2.438,2.029,-0.409,-16.79,85099,108159,True,True
+Aturan Humidity3pm >= 60: akurasi (%),73.589,73.286,-0.303,-0.41,138583,142193,True,False
+Aturan Humidity3pm >= 60: recall (%),70.543,70.21,-0.333,-0.47,138583,142193,True,False
+Aturan Humidity3pm >= 60: hari bertanda peringatan (%),35.576,35.775,0.2,0.56,138583,142193,True,False
+Aturan Humidity3pm >= 60: akurasi - baseline (poin),-4.104,-4.296,-0.191,-4.66,138583,142193,True,False
+Aturan Humidity3pm >= 70: akurasi (%),81.042,80.826,-0.216,-0.27,138583,142193,True,False
+Aturan Humidity3pm >= 70: recall (%),51.124,49.939,-1.185,-2.32,138583,142193,True,False
+Aturan Humidity3pm >= 70: hari bertanda peringatan (%),19.46,19.147,-0.313,-1.61,138583,142193,True,False
+Aturan Humidity3pm >= 70: akurasi - baseline (poin),3.348,3.244,-0.104,-3.11,138583,142193,True,False
+Aturan Humidity3pm >= 80: akurasi (%),82.563,82.321,-0.242,-0.29,138583,142193,True,False
+Aturan Humidity3pm >= 80: recall (%),32.43,31.59,-0.84,-2.59,138583,142193,True,False
+Aturan Humidity3pm >= 80: hari bertanda peringatan (%),9.599,9.425,-0.173,-1.81,138583,142193,True,False
+Aturan Humidity3pm >= 80: akurasi - baseline (poin),4.869,4.739,-0.131,-2.68,138583,142193,True,False

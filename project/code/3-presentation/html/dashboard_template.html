@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rainfall Pattern Analysis: dashboard</title>
+<meta name="description" content="Dashboard pola hujan dataset weatherAUS (analisis deskriptif tanpa machine learning).">
+<style>
+:root{color-scheme:light;
+--bg:#F8F9FA;--card:#FFFFFF;--sub:#F1F3F4;--line:#DADCE0;--ink:#202124;--head:#174EA6;--mut:#5F6368;
+--navy:#1A73E8;--soft:#E8F0FE;--amber:#FBBC04;--amber-ink:#3C2A00;--teal:#188038;
+--s1:#2a78d6;--s2:#eb6834;--s1dark:#184f95;--s1light:#9ec5f4;--grid:#e1e0d9;--axis:#c3c2b7;--axtxt:#6b6a66;
+--f:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f)}
+main{max-width:1180px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-left)) 56px}
+.banner{background:linear-gradient(120deg,#1A73E8,#4285F4);color:#fff;border-radius:18px;padding:22px 26px}
+.banner h1{margin:0 0 6px;font-size:clamp(24px,2.6vw,30px);font-weight:800;line-height:1.2}
+.banner p{margin:0;font-size:16.5px;opacity:.97}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.tag{border-radius:999px;padding:3px 12px;font-size:12.5px;font-weight:700;background:rgba(255,255,255,.2)}
+.tag.a{background:var(--amber);color:var(--amber-ink)}
+.stick{position:sticky;top:0;z-index:20;background:var(--bg);padding:8px 0 6px;margin-top:6px}
+.filters{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 14px;box-shadow:0 2px 6px rgba(60,64,67,.08)}
+.filters label{font-size:13px;font-weight:700;color:var(--mut);display:block;margin-bottom:2px}
+select{font:inherit;font-size:15px;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);max-width:100%;min-width:240px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button,.tb{font:inherit;font-size:14px;font-weight:600;cursor:pointer;border-radius:999px;padding:6px 13px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.seg button:hover,.tb:hover{border-color:var(--navy)}
+.seg button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.selinfo{font-size:13.5px;color:var(--mut);margin-left:auto;align-self:center}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 0 2px}
+nav a{flex:none;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;border-radius:999px;padding:5px 13px;font-size:14px;font-weight:600}
+nav a:hover{background:var(--amber);border-color:var(--amber);color:var(--amber-ink)}
+h2{font-size:clamp(20px,2vw,24px);font-weight:800;color:var(--head);margin:40px 0 8px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h2 small{display:block;font-size:14px;font-weight:400;color:var(--mut);margin-top:3px}
+h3{font-size:18px;font-weight:700;color:var(--head);margin:0 0 4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:12px 0}
+.grid2{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:900px){.grid2{grid-template-columns:1fr 1fr}}
+.grid2 .card{margin:0}.grid2{align-items:start}
+.how{background:var(--soft);border-radius:12px;padding:10px 14px;margin:8px 0;font-size:14px;line-height:1.5}
+.how b{color:var(--teal)}
+.chd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.chd .sub{font-size:13.5px;color:var(--mut);margin:0 0 6px}
+.na:empty{display:none}.na{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;background:var(--sub);border:1px solid var(--line);color:var(--mut);border-radius:999px;padding:0 8px}
+.figw{overflow-x:auto}
+.figw svg{display:block;width:100%;height:auto;font-family:var(--f)}
+.tbl{overflow-x:auto;max-height:420px;overflow-y:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th{background:var(--navy);color:#fff;padding:7px 10px;text-align:left;font-weight:700;position:sticky;top:0}
+td{padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(odd) td{background:var(--sub)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.kpis{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:760px){.kpis{grid-template-columns:1.4fr repeat(2,1fr)}}
+.hero{grid-row:span 2;background:var(--soft);border:1px solid #c6dafc;border-radius:16px;padding:18px 22px}
+.hero .v{font-size:clamp(48px,7vw,64px);font-weight:800;line-height:1.05;color:var(--head)}
+.hero .l{font-weight:700;font-size:17px}
+.hero .d{font-size:14px;color:var(--mut);margin-top:6px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.tile .v{font-size:30px;font-weight:700;line-height:1.15;color:var(--head)}
+.tile .l{font-weight:700;font-size:15px;margin-top:2px}
+.tile .d{font-size:13.5px;color:var(--mut);margin-top:4px;line-height:1.4}
+.find{margin:0;padding-left:20px}.find li{margin:6px 0}
+.callout{border-radius:14px;padding:12px 18px;margin:12px 0;font-size:15px}
+.callout.a{background:#FEF7E0;border:1px solid #FDD663;color:#3C2A00}
+.callout.g{background:#E6F4EA;border:1px solid #A8DAB5;color:#0D652D}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin:2px 0 6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legend i.ln{width:18px;height:3px;border-radius:2px;vertical-align:3px}
+.heat{display:grid;grid-template-columns:150px repeat(12,minmax(26px,1fr));gap:2px;font-size:13px;min-width:560px}
+.heat .hl{display:flex;align-items:center;padding-right:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.heat .hl.zone{font-weight:700;color:var(--head);padding-top:8px}
+.heat .hc{height:var(--ch,18px);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:12px}
+.heat .hm{text-align:center;color:var(--mut);font-weight:600;font-size:12.5px}
+.heat .hl.tot{font-weight:800}
+.heatkey{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut);margin-top:8px}
+.heatkey .bar{height:10px;width:200px;border-radius:5px}
+.rowtap{cursor:pointer}
+.rowtap:hover rect.bg{fill:#F1F3F4}
+.xhit .xl{opacity:0;stroke:var(--axis);stroke-width:1}
+.xhit:hover .xl{opacity:1}
+.pill{display:inline-block;white-space:nowrap;border-radius:999px;padding:0 9px;font-size:12px;font-weight:700}
+.pill.ok{background:#E6F4EA;color:#0D652D}.pill.warn{background:#FEF7E0;color:#7A4B00;border:1px solid #FDD663}
+#tip{position:fixed;display:none;max-width:320px;white-space:pre-line;background:#202124;color:#fff;padding:9px 12px;border-radius:10px;font-size:13.5px;line-height:1.4;z-index:50;pointer-events:none;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+input[type=range]{width:100%;accent-color:#1A73E8}
+.ctl{display:flex;align-items:center;gap:12px;margin:8px 0;font-weight:700;font-size:15px}
+.res{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:8px 0}
+@media(min-width:700px){.res{grid-template-columns:repeat(4,1fr)}}
+.res div{background:var(--sub);border-radius:12px;padding:8px 12px;font-size:13.5px;color:var(--mut)}
+.res b{display:block;font-size:22px;font-weight:800;color:var(--head)}
+ul.tight{margin:6px 0;padding-left:20px}ul.tight li{margin:5px 0}
+.small{font-size:13.5px;color:var(--mut)}
+footer{margin-top:40px;font-size:13.5px;color:var(--mut)}
+h2[id]{scroll-margin-top:140px}
+@media(max-width:700px){.stick{position:static}.grid2>*,.card{min-width:0}h2[id]{scroll-margin-top:12px}}
+.grid2>*{min-width:0}
+</style>
+</head>
+<body>
+<main>
+<header class="banner">
+  <h1>Rainfall Pattern Analysis</h1>
+  <p>Kapan dan di mana hujan paling sering turun di Australia, dan kondisi cuaca apa yang mendahului hujan keesokan harinya. Analisis deskriptif, tanpa machine learning.</p>
+  <div class="tags"><span class="tag a">Project 1</span><span class="tag" id="tagData"></span><span class="tag">SQL + pandas + dashboard HTML</span></div>
+</header>
+
+<nav aria-label="Navigasi bagian">
+  <a href="#ringkasan">Ringkasan</a><a href="#waktu">Pola waktu</a><a href="#lokasi">Lokasi</a><a href="#cuaca">Kondisi cuaca</a><a href="#aturan">Aturan praktis</a><a href="#jadwal">Jadwal kegiatan</a><a href="#data">Kualitas data</a>
+</nav>
+<div class="stick">
+  <div class="filters" role="group" aria-label="Filter">
+    <div><label for="selLoc">Lokasi</label><select id="selLoc"></select></div>
+    <div><label id="lblSeason">Musim (belahan selatan)</label><div class="seg" id="segSeason" role="group" aria-labelledby="lblSeason"></div></div>
+    <div class="selinfo" id="selInfo"></div>
+  </div>
+</div>
+
+<h2 id="ringkasan">Ringkasan<small>Angka mengikuti filter lokasi dan musim di atas</small></h2>
+<div class="kpis" id="kpis"></div>
+<div class="card"><h3>Temuan utama (seluruh data)</h3><ul class="find" id="findings"></ul>
+<p class="small">Temuan di atas dihitung dari semua lokasi dan semua musim, tidak mengikuti filter. Pola bukan sebab: tanda cuaca di sini tidak diuji sebagai penyebab hujan.</p></div>
+
+<h2 id="waktu">Pola waktu<small>Q1 bulan, Q2 musim dan zona iklim, Q3 tren tahunan</small></h2>
+<div class="card">
+  <div class="chd"><div><h3>Persentase hari hujan per bulan <span class="na" id="naHeat"></span></h3><p class="sub">Tiap kotak = lokasi x bulan. Makin gelap, makin sering hujan.</p></div><button class="tb" data-for="c-heat">Tabel</button></div>
+  <div class="how"><b>Cara membaca</b> Baca ke kanan untuk melihat bulan paling basah di satu lokasi. Gunakan filter lokasi untuk satu kota atau satu zona. Bila musim dipilih, bulan di luar musim itu dipudarkan. Arahkan kursor ke kotak untuk melihat jumlah hari.</div>
+  <div id="c-heat"></div>
+</div>
+<div class="grid2">
+  <div class="card"><div class="chd"><div><h3>Per musim</h3><p class="sub">Persentase hari hujan, lokasi terpilih digabung</p></div><button class="tb" data-for="c-season">Tabel</button></div><div id="c-season"></div></div>
+  <div class="card"><div class="chd"><div><h3>Musim basah vs kering <span class="na">hanya Tropis utara</span></h3><p class="sub">Basah = Nov-Apr, kering = Mei-Okt</p></div><button class="tb" data-for="c-wd">Tabel</button></div><div id="c-wd"></div></div>
+</div>
+<div class="card">
+  <div class="chd"><div><h3>Tren tahunan 2009-2016 <span class="na">filter musim tidak berlaku</span></h3><p class="sub" id="trendSub"></p></div><button class="tb" data-for="c-trend">Tabel</button></div>
+  <div id="c-trend"></div>
+  <p class="small">Hanya tahun dengan data lengkap (&ge; 90% hari) dan lokasi yang lengkap di kedelapan tahun, supaya perubahan tidak berasal dari lokasi yang masuk atau keluar. Tidak ada uji signifikansi.</p>
+</div>
+
+<h2 id="lokasi">Lokasi<small>Q4 peringkat, Q5 sering hujan belum tentu paling banyak air</small></h2>
+<div class="grid2">
+  <div class="card"><div class="chd"><div><h3>Peringkat lokasi <span class="na">klik batang untuk memilih lokasi</span></h3><p class="sub">Persentase hari hujan, semua lokasi, semua musim</p></div><button class="tb" data-for="c-rank">Tabel</button></div><div id="c-rank"></div></div>
+  <div class="card"><div class="chd"><div><h3>Sering hujan vs banyaknya air</h3><p class="sub">Sumbu x: % hari hujan. Sumbu y: perkiraan curah tahunan (mm, estimated)</p></div><button class="tb" data-for="c-scatter">Tabel</button></div><div id="c-scatter"></div>
+  <div class="how"><b>Cara membaca</b> Titik di kanan bawah hujannya sering tetapi ringan. Titik di atas hujannya lebat. Cairns dan Darwin curah tahunannya besar karena hujan per hari hujannya tinggi, bukan hanya karena sering.</div></div>
+</div>
+
+<h2 id="cuaca">Kondisi cuaca sebelum hujan<small>Q6-Q9: kondisi hari ini, dibandingkan antara hari yang diikuti hujan besok (Yes) dan tidak (No)</small></h2>
+<div class="card">
+  <div class="chd"><div><h3>Rata-rata kondisi pukul 15:00</h3><p class="sub" id="condSub"></p></div><button class="tb" data-for="c-cond">Tabel</button></div>
+  <div class="how"><b>Cara membaca</b> Tiap baris punya skala sendiri karena satuannya berbeda. Jarak antara dua titik adalah selisih rata-rata. Sunshine dan Cloud3pm hanya tersedia di sebagian lokasi, jumlah baris ditampilkan.</div>
+  <div id="c-cond"></div>
+  <p class="small" id="condCons"></p>
+</div>
+<div class="grid2">
+  <div class="card"><div class="chd"><div><h3>Arah hembusan angin <span class="na">semua lokasi</span></h3><p class="sub">Persentase hari yang diikuti hujan besok (Q9, tambahan)</p></div><button class="tb" data-for="c-wdir">Tabel</button></div><div id="c-wdir"></div></div>
+  <div class="card"><div class="chd"><div><h3>Kecepatan hembusan angin <span class="na">semua lokasi</span></h3><p class="sub">Persentase hari yang diikuti hujan besok, menurut km/jam</p></div><button class="tb" data-for="c-wspd">Tabel</button></div><div id="c-wspd"></div></div>
+</div>
+
+<h2 id="aturan">Aturan praktis<small>Q10 peluang beruntun, Q11 aturan ambang Humidity3pm vs baseline "selalu tidak hujan"</small></h2>
+<div class="card">
+  <div class="chd"><div><h3>Peluang hujan besok</h3><p class="sub">Menurut apakah hari ini hujan</p></div><button class="tb" data-for="c-pers">Tabel</button></div>
+  <div id="c-pers"></div>
+  <p class="small" id="persTxt"></p>
+</div>
+<div class="card">
+  <h3>Aturan: beri peringatan hujan jika Humidity3pm &ge; ambang</h3>
+  <div class="how"><b>Cara membaca</b> Garis oranye adalah baseline: menebak "besok tidak hujan" setiap hari. Akurasi aturan bisa tampak bagus padahal hari hujan banyak terlewat, jadi baca bersama recall (berapa hari hujan yang tertangkap) dan persentase hari yang diberi peringatan. Semua angka ketepatan adalah <b>estimated</b> dan dievaluasi pada data yang sama dengan yang dipakai membaca pola (tanpa data uji terpisah).</div>
+  <div class="ctl"><label for="sl">Ambang Humidity3pm</label><input id="sl" type="range" min="40" max="90" step="5" value="70"><output id="slo">70%</output></div>
+  <div class="res" id="res"></div>
+  <p id="ins" style="margin:8px 0 0;font-size:15.5px"></p>
+  <div class="grid2" style="margin-top:12px">
+    <div><div class="chd"><div><h3>Akurasi vs baseline</h3></div><button class="tb" data-for="c-acc">Tabel</button></div><div id="c-acc"></div></div>
+    <div><div class="chd"><div><h3>Recall dan hari bertanda peringatan</h3></div><button class="tb" data-for="c-rec">Tabel</button></div><div id="c-rec"></div></div>
+  </div>
+  <p class="small" id="periodTxt"></p>
+</div>
+
+<h2 id="jadwal">Jadwal kegiatan luar ruang<small>Q12: bulan dengan hari hujan paling sedikit per lokasi (estimated, dari 2007-2017, bukan prakiraan)</small></h2>
+<div class="card">
+  <div class="chd"><div><h3>Tiga bulan paling kering dan paling basah <span class="na">filter musim tidak berlaku</span></h3></div></div>
+  <div class="how"><b>Cara membaca</b> Angka dalam kurung adalah persentase hari hujan bulan itu. Jika selisih antar bulan kecil, pilihan bulan tidak banyak berbeda. Lokasi Tropis utara lebih tepat dibaca sebagai musim basah dan kering.</div>
+  <div id="c-sched"></div>
+</div>
+
+<h2 id="data">Kualitas data dan batasan<small>Q13-Q15: nilai kosong, uji sensitivitas, cek silang</small></h2>
+<div class="grid2">
+  <div class="card"><div class="chd"><div><h3>Nilai kosong per kolom <span class="na">semua lokasi</span></h3><p class="sub">Persentase baris kosong di data mentah</p></div><button class="tb" data-for="c-miss">Tabel</button></div><div id="c-miss"></div>
+  <p class="small" id="missTxt"></p></div>
+  <div class="card"><h3>Uji sensitivitas: dibuang vs diisi median</h3><p class="sub small">Skenario A: baris kosong dibuang. Skenario B: diisi median per lokasi x bulan. Tanda "dicermati" = berubah &gt; 10% atau arah berubah.</p><div class="tbl" id="c-sens"></div></div>
+</div>
+<div class="grid2">
+  <div class="card"><h3>Cek silang SQL vs pandas (Q15)</h3><p id="xcheck"></p></div>
+  <div class="card"><h3>Batasan yang sudah diketahui</h3>
+  <ul class="tight small" style="color:var(--ink)">
+    <li><b>Pola belum tentu penyebab.</b> Analisis ini tidak menguji sebab-akibat.</li>
+    <li><b>Akurasi bisa menyesatkan.</b> Hari hujan jauh lebih sedikit dari hari tidak hujan, jadi baca bersama recall dan proporsi hari bertanda peringatan.</li>
+    <li><b>Hari berdekatan saling terkait.</b> Baris tidak sepenuhnya independen, hasil dilaporkan sebagai pola, bukan uji statistik.</li>
+    <li><b>Cakupan tidak merata.</b> Periode dan kolom terisi berbeda antar lokasi. Data berakhir Juni 2017.</li>
+    <li><b>Zona iklim dibuat manual</b> (usulan awal) di data/dim_location.csv.</li>
+  </ul></div>
+</div>
+<footer id="foot"></footer>
+</main>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const D = /*__DATA__*/null;
+
+/* CALC START: fungsi murni, diuji di Node oleh scripts/06_build_dashboard.py terhadap outputs/kpi_overall.csv */
+const MIN_N = 30; // di bawah ini rasio/recall tidak ditampilkan (sampel terlalu kecil, angka tidak stabil)
+function inFilter(r, S, season, seasIdx) {
+  return S.has(r[0]) && (season === 'ALL' || seasIdx < 0 || r[seasIdx] === season);
+}
+function condAgg(D, S, season) {
+  const o = {};
+  for (const r of D.cond) { // [loc, season, variable, rt, n, sum]
+    if (!inFilter(r, S, season, 1)) continue;
+    const v = o[r[2]] || (o[r[2]] = {yes: {n: 0, sum: 0}, no: {n: 0, sum: 0}});
+    const g = r[3] === 1 ? v.yes : v.no; g.n += r[4]; g.sum += r[5];
+  }
+  for (const k in o) {
+    const v = o[k];
+    v.my = v.yes.n ? v.yes.sum / v.yes.n : null;
+    v.mn = v.no.n ? v.no.sum / v.no.n : null;
+    v.diff = (v.my != null && v.mn != null) ? v.my - v.mn : null;
+  }
+  return o;
+}
+function ruleAgg(D, S, season) {
+  const m = {};
+  for (const r of D.rule) { // [loc, season, th, tp, fp, fn, tn]
+    if (!inFilter(r, S, season, 1)) continue;
+    const t = m[r[2]] || (m[r[2]] = {th: r[2], tp: 0, fp: 0, fn: 0, tn: 0});
+    t.tp += r[3]; t.fp += r[4]; t.fn += r[5]; t.tn += r[6];
+  }
+  return Object.values(m).sort((a, b) => a.th - b.th).map(t => {
+    const n = t.tp + t.fp + t.fn + t.tn;
+    return Object.assign({}, t, {n,
+      acc: 100 * (t.tp + t.tn) / n,
+      recall: t.tp + t.fn >= MIN_N ? 100 * t.tp / (t.tp + t.fn) : null,
+      warn: 100 * (t.tp + t.fp) / n,
+      prec: t.tp + t.fp ? 100 * t.tp / (t.tp + t.fp) : null,
+      base: 100 * (t.fp + t.tn) / n});
+  });
+}
+function persAgg(D, S, season) {
+  let ty = 0, tyy = 0, tn = 0, tny = 0;
+  for (const r of D.pers) { // [loc, season, today_yes, tomorrow_yes_given_yes, today_no, tomorrow_yes_given_no]
+    if (!inFilter(r, S, season, 1)) continue;
+    ty += r[2]; tyy += r[3]; tn += r[4]; tny += r[5];
+  }
+  return {ty, tyy, tn, tny, pyes: ty >= MIN_N ? 100 * tyy / ty : null, pno: tn >= MIN_N ? 100 * tny / tn : null,
+          ratio: (ty >= MIN_N && tn >= MIN_N && tny >= MIN_N) ? (tyy / ty) / (tny / tn) : null};
+}
+function rainAgg(D, S, season) {
+  let n = 0, rain = 0, mm = 0;
+  for (const r of D.ls) { // [loc, season, n_obs, rain_days, sum_mm]
+    if (!inFilter(r, S, season, 1)) continue;
+    n += r[2]; rain += r[3]; mm += r[4];
+  }
+  return {n, rain, k1: n ? 100 * rain / n : null, k2: rain ? mm / rain : null};
+}
+function calcKPI(D, S, season) {
+  const a = rainAgg(D, S, season), c = condAgg(D, S, season), p = persAgg(D, S, season);
+  const rl = ruleAgg(D, S, season).find(x => x.th === 70);
+  return {n: a.n, rain: a.rain, k1: a.k1, k2: a.k2,
+          k3: c.Humidity3pm ? c.Humidity3pm.diff : null, k4: p.ratio, k5: rl ? rl.recall : null};
+}
+/* CALC END */
+
+const MONTHS = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+const SEASONS = ['Summer','Autumn','Winter','Spring'];
+const SEAS_LABEL = {Summer:'Summer (Des-Feb)', Autumn:'Autumn (Mar-Mei)', Winter:'Winter (Jun-Agu)', Spring:'Spring (Sep-Nov)'};
+const C = {s1:'#2a78d6', s2:'#eb6834', s1dark:'#184f95', s1light:'#9ec5f4', grid:'#e1e0d9', axis:'#c3c2b7', ink:'#202124', mut:'#5F6368', surf:'#ffffff', ax:'#6b6a66'};
+const RAMP = ['#cde2fb','#b7d3f6','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf','#1c5cab','#184f95','#104281','#0d366b'];
+const state = {sel: 'ALL', season: 'ALL', th: 70};
+const $ = id => document.getElementById(id);
+
+/* ---------- util ---------- */
+const fmt = (v, d = 1) => {
+  if (v == null || isNaN(v)) return '-';
+  const s = Math.abs(v).toFixed(d); let [i, f] = s.split('.');
+  i = i.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return (v < 0 ? '−' : '') + i + (f ? ',' + f : '');
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tipA = t => `data-tip="${esc(t)}"`;
+const mixHex = (a, b, t) => {
+  const p = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const x = p(a), y = p(b);
+  return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join('');
+};
+function heatColor(v, max) {
+  const t = Math.max(0, Math.min(1, v / max)) * (RAMP.length - 1);
+  const a = Math.floor(t), b = Math.min(RAMP.length - 1, a + 1);
+  return {bg: mixHex(RAMP[a], RAMP[b], t - a), dark: t >= 6};
+}
+function niceStep(max, ticks = 4) {
+  const raw = max / ticks, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p;
+  return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p;
+}
+function barPathV(x, y, w, h, r = 4) { r = Math.min(r, w / 2, h);
+  return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`; }
+function barPathH(x, y, w, h, r = 4) { r = Math.min(r, h / 2, w);
+  return `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x}Z`; }
+function tableHTML(head, rows) {
+  return `<table><thead><tr>${head.map((h, i) => `<th class="${i ? 'num' : ''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>` +
+    rows.map(r => `<tr>${r.map((c, i) => `<td class="${i ? 'num' : ''}">${esc(c)}</td>`).join('')}</tr>`).join('') + '</tbody></table>';
+}
+function mount(id, viz, head, rows) {
+  const el = $(id), wasTable = el.dataset.mode === 'table';
+  el.innerHTML = `<div class="figw" ${wasTable ? 'hidden' : ''}>${viz}</div><div class="tbl" ${wasTable ? '' : 'hidden'}>${tableHTML(head, rows)}</div>`;
+}
+
+/* ---------- grafik dasar ---------- */
+function vbars(items, o) {
+  const W = o.w || 520, H = o.h || 250, m = {l: 44, r: 12, t: 22, b: 34};
+  const pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const step = niceStep(o.max, 4), top = Math.ceil(o.max / step) * step;
+  const band = pw / items.length, bw = Math.min(24, band * .6);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.label)}" style="min-width:${o.minw || 380}px;max-width:${W}px">`;
+  for (let v = 0; v <= top + 1e-9; v += step) {
+    const y = m.t + ph - ph * v / top;
+    s += `<line x1="${m.l}" x2="${W - m.r}" y1="${y}" y2="${y}" stroke="${v === 0 ? C.axis : C.grid}"/>`;
+    s += `<text x="${m.l - 6}" y="${y + 4}" text-anchor="end" font-size="12" fill="${C.ax}">${fmt(v, step < 1 ? 1 : 0)}</text>`;
+  }
+  items.forEach((it, i) => {
+    const h = Math.max(0, ph * it.v / top), x = m.l + band * i + (band - bw) / 2, y = m.t + ph - h;
+    s += `<g ${tipA(it.tip)}><rect x="${m.l + band * i}" y="${m.t}" width="${band}" height="${ph}" fill="transparent"/>` +
+         `<path d="${barPathV(x, y, bw, h)}" fill="${it.fill || C.s1}"/></g>`;
+    s += `<text x="${x + bw / 2}" y="${y - 6}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${C.ink}">${fmt(it.v, o.dec == null ? 1 : o.dec)}${o.unit || ''}</text>`;
+    s += `<text x="${m.l + band * i + band / 2}" y="${H - 12}" text-anchor="middle" font-size="12.5" fill="${C.ax}">${esc(it.label)}</text>`;
+  });
+  return s + '</svg>';
+}
+function hbars(items, o) {
+  const W = o.w || 520, rh = o.rh || 16, bh = o.bh || 10, m = {l: o.lw || 118, r: 52, t: 6, b: 24};
+  const H = m.t + m.b + rh * items.length, pw = W - m.l - m.r;
+  const step = niceStep(o.max, 4), top = Math.ceil(o.max / step) * step;
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.label)}" style="min-width:${o.minw || 380}px;max-width:${W}px">`;
+  for (let v = 0; v <= top + 1e-9; v += step) {
+    const x = m.l + pw * v / top;
+    s += `<line x1="${x}" x2="${x}" y1="${m.t}" y2="${H - m.b}" stroke="${v === 0 ? C.axis : C.grid}"/>`;
+    s += `<text x="${x}" y="${H - 8}" text-anchor="middle" font-size="12" fill="${C.ax}">${fmt(v, 0)}</text>`;
+  }
+  items.forEach((it, i) => {
+    const y = m.t + rh * i, w = Math.max(1, pw * it.v / top);
+    s += `<g class="${it.click ? 'rowtap' : ''}" ${it.click ? `data-click="${esc(it.click)}"` : ''} ${tipA(it.tip)}>` +
+         `<rect class="bg" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"/>` +
+         `<text x="${m.l - 6}" y="${y + rh / 2 + 4}" text-anchor="end" font-size="12" fill="${it.hi === false ? C.ax : C.ink}" ${it.hi ? 'font-weight="700"' : ''}>${esc(it.label)}</text>` +
+         `<path d="${barPathH(m.l, y + (rh - bh) / 2, w, bh, 3)}" fill="${it.fill || C.s1}"/>` +
+         (it.showVal ? `<text x="${m.l + w + 5}" y="${y + rh / 2 + 4}" font-size="12" fill="${C.ink}">${fmt(it.v, o.dec == null ? 1 : o.dec)}${o.unit || ''}</text>` : '') + `</g>`;
+  });
+  return s + '</svg>';
+}
+function lineChart(series, xs, o) {
+  const W = o.w || 520, H = o.h || 250, m = {l: 46, r: 14, t: 16, b: 34};
+  const pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const lo = o.min, step = niceStep(o.max - lo, 4), top = lo + Math.ceil((o.max - lo) / step) * step;
+  const X = i => m.l + (xs.length === 1 ? pw / 2 : pw * i / (xs.length - 1)), Y = v => m.t + ph - ph * (v - lo) / (top - lo);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.label)}" style="min-width:${o.minw || 380}px;max-width:${W}px">`;
+  for (let v = lo; v <= top + 1e-9; v += step) {
+    s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${v === lo ? C.axis : C.grid}"/>`;
+    s += `<text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end" font-size="12" fill="${C.ax}">${fmt(v, 0)}${o.unit || ''}</text>`;
+  }
+  xs.forEach((x, i) => { s += `<text x="${X(i)}" y="${H - 12}" text-anchor="middle" font-size="12.5" fill="${C.ax}">${esc(x)}</text>`; });
+  series.forEach(se => {
+    const pts = se.vals.map((v, i) => v == null ? null : [X(i), Y(v)]).filter(Boolean);
+    s += `<polyline points="${pts.map(p => p.join(',')).join(' ')}" fill="none" stroke="${se.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  });
+  xs.forEach((x, i) => {
+    const bw = pw / Math.max(1, xs.length - 1);
+    const t = `${x}\n` + series.map(se => `${se.name}: ${fmt(se.vals[i], o.dec == null ? 1 : o.dec)}${o.unit || ''}`).join('\n');
+    s += `<g class="xhit" ${tipA(t)}><line class="xl" x1="${X(i)}" x2="${X(i)}" y1="${m.t}" y2="${m.t + ph}"/>` +
+         `<rect x="${X(i) - bw / 2}" y="${m.t}" width="${bw}" height="${ph}" fill="transparent"/></g>`;
+  });
+  series.forEach(se => se.vals.forEach((v, i) => {
+    if (v == null) return;
+    const big = o.hiX === i;
+    s += `<circle cx="${X(i)}" cy="${Y(v)}" r="${big ? 6 : 4}" fill="${se.color}" stroke="${C.surf}" stroke-width="2" pointer-events="none"/>`;
+  }));
+  return s + '</svg>';
+}
+
+/* ---------- pilihan lokasi / musim ---------- */
+const ZONES = [...new Set(D.locs.map(l => l[1]))];
+function selSet() {
+  if (state.sel === 'ALL') return new Set(D.locs.map(l => l[0]));
+  if (state.sel.startsWith('zone:')) return new Set(D.locs.filter(l => l[1] === state.sel.slice(5)).map(l => l[0]));
+  return new Set([state.sel.slice(4)]);
+}
+function selName() {
+  if (state.sel === 'ALL') return `Semua lokasi (${D.locs.length})`;
+  if (state.sel.startsWith('zone:')) { const z = state.sel.slice(5); return `Zona ${z} (${D.locs.filter(l => l[1] === z).length} lokasi)`; }
+  return state.sel.slice(4);
+}
+function buildFilters() {
+  let h = `<option value="ALL">Semua lokasi (${D.locs.length})</option><optgroup label="Per zona iklim">`;
+  ZONES.forEach(z => { h += `<option value="zone:${esc(z)}">Zona: ${esc(z)} (${D.locs.filter(l => l[1] === z).length})</option>`; });
+  h += '</optgroup>';
+  ZONES.forEach(z => {
+    h += `<optgroup label="${esc(z)}">` + D.locs.filter(l => l[1] === z).map(l => `<option value="loc:${esc(l[0])}">${esc(l[0])}</option>`).join('') + '</optgroup>';
+  });
+  $('selLoc').innerHTML = h;
+  $('selLoc').onchange = e => { state.sel = e.target.value; render(); };
+  const segs = [['ALL', 'Semua musim']].concat(SEASONS.map(s => [s, SEAS_LABEL[s]]));
+  $('segSeason').innerHTML = segs.map(([k, l]) => `<button type="button" data-s="${k}" aria-pressed="${k === state.season}">${l}</button>`).join('');
+  $('segSeason').onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    state.season = b.dataset.s;
+    $('segSeason').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    render();
+  };
+}
+function locZone(l) { return (D.locs.find(x => x[0] === l) || [])[1]; }
+
+/* ---------- panel ---------- */
+function renderKPIs(S) {
+  const k = calcKPI(D, S, state.season), all = D.g.kpiAll;
+  const ctx = `${selName()}, ${state.season === 'ALL' ? 'semua musim' : SEAS_LABEL[state.season]}`;
+  const cmp = (key, d) => (state.sel === 'ALL' && state.season === 'ALL') ? '' : ` Seluruh data: ${fmt(all[key], d)}.`;
+  const small = k.rain < MIN_N ? ' <b>Sampel kecil (kurang dari 30 hari hujan), angka tidak stabil.</b>' : '';
+  const u = (v, d, unit) => v == null ? '-' : fmt(v, d) + unit;
+  $('kpis').innerHTML =
+    `<div class="hero"><div class="v">${u(k.k1, 1, '%')}</div><div class="l">Frekuensi hari hujan</div>` +
+    `<div class="d">${fmt(k.rain, 0)} hari hujan dari ${fmt(k.n, 0)} hari teramati. Hari hujan = Rainfall &gt; 1,0 mm.${cmp('k1', 1)}${small}</div></div>` +
+    `<div class="tile"><div class="v">${u(k.k2, 1, ' mm')}</div><div class="l">Curah per hari hujan</div><div class="d">Rata-rata Rainfall pada hari hujan.${cmp('k2', 1)}</div></div>` +
+    `<div class="tile"><div class="v">${k.k3 == null ? '-' : (k.k3 >= 0 ? '+' : '') + fmt(k.k3, 1) + ' poin'}</div><div class="l">Selisih Humidity3pm</div><div class="d">Sebelum hujan dikurangi sebelum tidak hujan.${cmp('k3', 1)}</div></div>` +
+    `<div class="tile"><div class="v">${u(k.k4, 2, 'x')}</div><div class="l">Rasio peluang beruntun</div><div class="d">Peluang hujan besok jika hari ini hujan, dibanding jika tidak.${cmp('k4', 2)}</div></div>` +
+    `<div class="tile"><div class="v">${u(k.k5, 1, '%')}</div><div class="l">Recall aturan Humidity3pm &ge; 70</div><div class="d">Hari hujan yang tertangkap aturan (estimated).${cmp('k5', 1)}</div></div>`;
+  $('selInfo').textContent = `Menampilkan: ${ctx}.`;
+}
+
+function renderHeat(S) {
+  const mx = D.g.heatMax;
+  const rows = D.locs.filter(l => S.has(l[0]));
+  const cell = {}; D.m.forEach(r => { if (S.has(r[0])) cell[r[0] + '|' + r[1]] = r; });
+  const monthSeason = m => ({12:'Summer',1:'Summer',2:'Summer',3:'Autumn',4:'Autumn',5:'Autumn',6:'Winter',7:'Winter',8:'Winter',9:'Spring',10:'Spring',11:'Spring'})[m];
+  const faded = m => state.season !== 'ALL' && monthSeason(m) !== state.season;
+  const big = rows.length > 6, ch = big ? 16 : 30;
+  let h = `<div class="figw"><div class="heat" style="--ch:${ch}px"><div></div>` + MONTHS.map(m => `<div class="hm">${m}</div>`).join('');
+  const tot = {}; // baris gabungan
+  const addRow = (label, cls, get) => {
+    h += `<div class="hl ${cls}" title="${esc(label)}">${esc(label)}</div>`;
+    for (let m = 1; m <= 12; m++) {
+      const c = get(m);
+      if (!c || !c[2]) { h += `<div class="hc" style="background:#f1f3f4;color:#9aa0a6;opacity:${faded(m) ? .3 : 1}">-</div>`; continue; }
+      const p = 100 * c[3] / c[2], col = heatColor(p, mx);
+      h += `<div class="hc" ${tipA(`${label}, ${MONTHS[m - 1]}\n${fmt(p, 1)}% hari hujan\n${fmt(c[3], 0)} dari ${fmt(c[2], 0)} hari`)} style="background:${col.bg};color:${col.dark ? '#fff' : '#202124'};opacity:${faded(m) ? .3 : 1}">${big ? '' : fmt(p, 0)}</div>`;
+    }
+  };
+  if (rows.length > 1) addRow('Gabungan terpilih', 'tot', m => {
+    let n = 0, r = 0; rows.forEach(l => { const c = cell[l[0] + '|' + m]; if (c) { n += c[2]; r += c[3]; } }); return [null, m, n, r]; });
+  let lastZ = null;
+  rows.forEach(l => {
+    if (rows.length > 1 && l[1] !== lastZ) { h += `<div class="hl zone" style="grid-column:1/-1">${esc(l[1])}</div>`; lastZ = l[1]; }
+    addRow(l[0], '', m => cell[l[0] + '|' + m]);
+  });
+  h += `</div><div class="heatkey"><span>0%</span><span class="bar" style="background:linear-gradient(90deg,${RAMP.join(',')})"></span><span>${fmt(mx, 0)}% hari hujan</span></div></div>`;
+  const trows = rows.map(l => [l[0], ...MONTHS.map((_, i) => { const c = cell[l[0] + '|' + (i + 1)]; return c && c[2] ? fmt(100 * c[3] / c[2], 1) : '-'; })]);
+  const el = $('c-heat'), wasTable = el.dataset.mode === 'table';
+  el.innerHTML = h + `<div class="tbl" ${wasTable ? '' : 'hidden'}>${tableHTML(['Lokasi', ...MONTHS], trows)}</div>`;
+  el.querySelector('.figw').hidden = wasTable;
+  $('naHeat').textContent = state.season === 'ALL' ? '' : 'musim terpilih disorot';
+}
+
+function renderSeason(S) {
+  const items = SEASONS.map(s => {
+    const a = rainAgg(D, S, s), sel = state.season === 'ALL' || state.season === s;
+    return {label: s, v: a.k1 || 0, fill: sel ? C.s1 : C.s1light, a,
+            tip: `${SEAS_LABEL[s]}\n${fmt(a.k1, 1)}% hari hujan\n${fmt(a.rain, 0)} dari ${fmt(a.n, 0)} hari`};
+  });
+  const mx = Math.max(10, ...items.map(i => i.v));
+  mount('c-season', vbars(items, {max: mx * 1.1, unit: '%', label: 'Persentase hari hujan per musim'}),
+        ['Musim', '% hari hujan', 'Hari hujan', 'Hari teramati'], items.map(i => [SEAS_LABEL[i.label], fmt(i.a.k1, 1), fmt(i.a.rain, 0), fmt(i.a.n, 0)]));
+}
+function renderWetDry(S) {
+  const g = {Basah: [0, 0], Kering: [0, 0]};
+  D.wd.forEach(r => { if (S.has(r[0])) { g[r[1]][0] += r[2]; g[r[1]][1] += r[3]; } });
+  if (!g.Basah[0]) { $('c-wd').dataset.mode = ''; $('c-wd').innerHTML = '<p class="small">Lokasi terpilih bukan bagian dari zona Tropis utara (Darwin, Katherine, Cairns, Townsville).</p>'; return; }
+  const items = ['Basah', 'Kering'].map(k => ({label: k, v: 100 * g[k][1] / g[k][0], tip: `Musim ${k.toLowerCase()}\n${fmt(100 * g[k][1] / g[k][0], 1)}% hari hujan\n${fmt(g[k][1], 0)} dari ${fmt(g[k][0], 0)} hari`}));
+  mount('c-wd', vbars(items, {max: Math.max(...items.map(i => i.v)) * 1.1, unit: '%', label: 'Musim basah dan kering'}),
+        ['Musim', '% hari hujan', 'Hari teramati'], ['Basah', 'Kering'].map((k, i) => [k, fmt(items[i].v, 1), fmt(g[k][0], 0)]));
+}
+function renderTrend(S) {
+  const years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], by = {}, locs = new Set();
+  D.ly.forEach(r => { if (!S.has(r[0])) return; locs.add(r[0]); const y = by[r[1]] || (by[r[1]] = [0, 0]); y[0] += r[2]; y[1] += r[3]; });
+  $('trendSub').textContent = locs.size ? `${fmt(locs.size, 0)} lokasi terpilih memenuhi syarat lengkap 2009-2016` : '';
+  if (!locs.size) { $('c-trend').dataset.mode = ''; $('c-trend').innerHTML = '<p class="small">Tidak ada lokasi terpilih yang lengkap di kedelapan tahun (2009-2016).</p>'; return; }
+  const vals = years.map(y => by[y] ? 100 * by[y][1] / by[y][0] : null);
+  const mx = Math.max(...vals.filter(v => v != null));
+  mount('c-trend', lineChart([{name: 'Hari hujan', color: C.s1, vals}], years.map(String), {min: 0, max: mx * 1.25, unit: '%', label: 'Persentase hari hujan per tahun', w: 1000, h: 260, minw: 560}),
+        ['Tahun', '% hari hujan', 'Hari teramati'], years.map(y => [y, fmt(vals[years.indexOf(y)], 1), by[y] ? fmt(by[y][0], 0) : '-']));
+}
+
+function renderRank(S) {
+  const rs = D.rank.slice().sort((a, b) => b[4] - a[4]);
+  const items = rs.map(r => {
+    const sel = S.has(r[0]) || S.size === D.locs.length;
+    return {label: r[0], v: r[4], hi: S.size < D.locs.length ? S.has(r[0]) : null, fill: sel ? C.s1 : C.s1light, click: 'loc:' + r[0], showVal: false,
+            tip: `${r[0]} (${r[1]})\n${fmt(r[4], 1)}% hari hujan\n${fmt(r[3], 0)} dari ${fmt(r[2], 0)} hari\nKlik untuk memilih lokasi ini`};
+  });
+  const items2 = items.map((it, i) => Object.assign(it, {showVal: true}));
+  mount('c-rank', hbars(items2, {max: Math.max(...rs.map(r => r[4])) * 1.05, unit: '%', label: 'Peringkat lokasi menurut persentase hari hujan', rh: 15, bh: 9, lw: 112, w: 520}),
+        ['Lokasi', 'Zona', '% hari hujan', 'Hari teramati'], rs.map(r => [r[0], r[1], fmt(r[4], 1), fmt(r[2], 0)]));
+}
+function renderScatter(S) {
+  const W = 520, H = 330, m = {l: 54, r: 16, t: 14, b: 44}, pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const xmax = 40, ymax = 2400;
+  const X = v => m.l + pw * v / xmax, Y = v => m.t + ph - ph * v / ymax;
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Sebaran persentase hari hujan terhadap perkiraan curah tahunan" style="min-width:420px;max-width:${W}px">`;
+  for (let v = 0; v <= ymax; v += 600) s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${v === 0 ? C.axis : C.grid}"/><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end" font-size="12" fill="${C.ax}">${fmt(v, 0)}</text>`;
+  for (let v = 0; v <= xmax; v += 10) s += `<text x="${X(v)}" y="${H - 24}" text-anchor="middle" font-size="12" fill="${C.ax}">${v}%</text>`;
+  s += `<text x="${m.l + pw / 2}" y="${H - 6}" text-anchor="middle" font-size="12.5" fill="${C.ax}">Hari hujan (%)</text>`;
+  s += `<text x="12" y="${m.t + ph / 2}" font-size="12.5" fill="${C.ax}" transform="rotate(-90 12 ${m.t + ph / 2})" text-anchor="middle">Curah tahunan (mm, estimated)</text>`;
+  const allSel = S.size === D.locs.length, named = new Set(['Cairns', 'Darwin', 'Portland', 'Woomera', 'CoffsHarbour']);
+  const pts = D.rank.slice().sort((a, b) => (S.has(a[0]) ? 1 : 0) - (S.has(b[0]) ? 1 : 0));
+  pts.forEach(r => {
+    const sel = allSel || S.has(r[0]);
+    s += `<g ${tipA(`${r[0]} (${r[1]})\n${fmt(r[4], 1)}% hari hujan\n${fmt(r[6], 0)} mm per tahun (estimated)\n${fmt(r[5], 1)} mm per hari hujan`)}><circle cx="${X(r[4])}" cy="${Y(r[6])}" r="14" fill="transparent"/>` +
+         `<circle cx="${X(r[4])}" cy="${Y(r[6])}" r="5" fill="${sel ? C.s1 : C.s1light}" stroke="${C.surf}" stroke-width="2"/></g>`;
+    if (named.has(r[0])) s += `<text x="${X(r[4]) + 8}" y="${Y(r[6]) + 4}" font-size="12" fill="${C.ink}" pointer-events="none">${r[0]}</text>`;
+  });
+  mount('c-scatter', s + '</svg>', ['Lokasi', '% hari hujan', 'mm per hari hujan', 'Curah tahunan (mm, estimated)'],
+        D.rank.slice().sort((a, b) => b[6] - a[6]).map(r => [r[0], fmt(r[4], 1), fmt(r[5], 1), fmt(r[6], 0)]));
+}
+
+function renderCond(S) {
+  const c = condAgg(D, S, state.season);
+  const vars = [['Humidity3pm', 'Humidity3pm (%)'], ['Pressure3pm', 'Pressure3pm (hPa)'], ['Sunshine', 'Sunshine (jam)'], ['Cloud3pm', 'Cloud3pm (oktas)']];
+  const W = 1000, rh = 62, H = 28 + rh * vars.length, lx = 190, rx = 800;
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Rata-rata kondisi cuaca menurut hujan besok" style="min-width:560px;max-width:${W}px">`;
+  const rows = [];
+  vars.forEach(([k, lab], i) => {
+    const v = c[k], y = 20 + rh * i + rh / 2;
+    s += `<text x="0" y="${y - 3}" font-size="14" font-weight="700" fill="${C.ink}">${lab}</text>`;
+    if (!v || v.my == null || v.mn == null) { s += `<text x="0" y="${y + 15}" font-size="12.5" fill="${C.ax}">tidak ada data untuk pilihan ini</text>`; rows.push([lab, '-', '-', '-', '-', '-']); return; }
+    const lo = Math.min(v.my, v.mn), hi = Math.max(v.my, v.mn), pad = Math.max((hi - lo) * 1.1, 1e-6);
+    const X = val => lx + (rx - lx) * (val - (lo - pad)) / ((hi + pad) - (lo - pad));
+    s += `<line x1="${lx}" x2="${rx}" y1="${y}" y2="${y}" stroke="${C.grid}"/><line x1="${X(lo)}" x2="${X(hi)}" y1="${y}" y2="${y}" stroke="${C.axis}" stroke-width="2"/>`;
+    [[v.my, C.s2, 'Besok hujan', v.yes.n], [v.mn, C.s1, 'Besok tidak hujan', v.no.n]].forEach(([val, col, nm, n], j) => {
+      s += `<g ${tipA(`${lab}\n${nm}: rata-rata ${fmt(val, 2)}\n${fmt(n, 0)} hari`)}><circle cx="${X(val)}" cy="${y}" r="14" fill="transparent"/><circle cx="${X(val)}" cy="${y}" r="6" fill="${col}" stroke="${C.surf}" stroke-width="2"/></g>`;
+      s += `<text x="${X(val)}" y="${y + (j === 0 ? -12 : 21)}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${C.ink}">${fmt(val, k === 'Pressure3pm' ? 1 : 1)}</text>`;
+    });
+    s += `<text x="${W}" y="${y - 3}" text-anchor="end" font-size="12.5" fill="${C.ax}">selisih ${v.diff >= 0 ? '+' : '−'}${fmt(Math.abs(v.diff), 1)} | n ${fmt(v.yes.n + v.no.n, 0)}</text>`;
+    rows.push([lab, fmt(v.my, 2), fmt(v.mn, 2), (v.diff >= 0 ? '+' : '') + fmt(v.diff, 2), fmt(v.yes.n, 0), fmt(v.no.n, 0)]);
+  });
+  s += '</svg>';
+  const legend = `<div class="legend"><span><i style="background:${C.s2}"></i>Besok hujan (Yes)</span><span><i style="background:${C.s1}"></i>Besok tidak hujan (No)</span></div>`;
+  const el = $('c-cond'), wasTable = el.dataset.mode === 'table';
+  el.innerHTML = legend + `<div class="figw" ${wasTable ? 'hidden' : ''}>${s}</div><div class="tbl" ${wasTable ? '' : 'hidden'}>${tableHTML(['Variabel', 'Rata-rata Yes', 'Rata-rata No', 'Selisih', 'n Yes', 'n No'], rows)}</div>`;
+  $('condSub').textContent = `${selName()}, ${state.season === 'ALL' ? 'semua musim' : SEAS_LABEL[state.season]}`;
+  // konsistensi arah per lokasi
+  const bl = {};
+  D.cond.forEach(r => { if (!S.has(r[0]) || (state.season !== 'ALL' && r[1] !== state.season)) return;
+    const o = bl[r[0] + '|' + r[2]] || (bl[r[0] + '|' + r[2]] = {y: [0, 0], n: [0, 0]}); const g = r[3] === 1 ? o.y : o.n; g[0] += r[4]; g[1] += r[5]; });
+  const cons = vars.map(([k, lab]) => {
+    let tot = 0, same = 0; const dirAll = c[k] && c[k].diff != null ? Math.sign(c[k].diff) : 0;
+    S.forEach(l => { const o = bl[l + '|' + k]; if (o && o.y[0] && o.n[0]) { tot++; if (Math.sign(o.y[1] / o.y[0] - o.n[1] / o.n[0]) === dirAll) same++; } });
+    return tot ? `${k}: arah sama di ${same} dari ${tot} lokasi` : null;
+  }).filter(Boolean);
+  $('condCons').textContent = cons.length ? 'Konsistensi dalam lokasi (arah selisih sama dengan gabungan): ' + cons.join('; ') + '.' : '';
+}
+function renderWind() {
+  const dirs = D.g.windDir.slice().sort((a, b) => b[2] - a[2]);
+  mount('c-wdir', hbars(dirs.map(r => ({label: r[0], v: r[2], showVal: true, tip: `Arah ${r[0]}\n${fmt(r[2], 1)}% diikuti hujan besok\nn ${fmt(r[1], 0)} hari`})), {max: 60, unit: '%', label: 'Hujan besok menurut arah hembusan', rh: 17, bh: 11, lw: 40, w: 520, minw: 380}),
+        ['Arah', 'n hari', '% hujan besok'], dirs.map(r => [r[0], fmt(r[1], 0), fmt(r[2], 1)]));
+  const sp = D.g.windSpeed;
+  mount('c-wspd', vbars(sp.map(r => ({label: r[0], v: r[2], tip: `${r[0]} km/jam\n${fmt(r[2], 1)}% diikuti hujan besok\nn ${fmt(r[1], 0)} hari`})), {max: 55, unit: '%', label: 'Hujan besok menurut kecepatan hembusan', h: 270}),
+        ['km/jam', 'n hari', '% hujan besok'], sp.map(r => [r[0], fmt(r[1], 0), fmt(r[2], 1)]));
+}
+
+function renderPers(S) {
+  const p = persAgg(D, S, state.season);
+  if (p.pyes == null || p.pno == null) { $('c-pers').dataset.mode = ''; $('c-pers').innerHTML = '<p class="small">Terlalu sedikit hari (kurang dari 30) pada salah satu kelompok untuk menghitung peluang secara stabil.</p>'; $('persTxt').textContent = ''; return; }
+  const items = [{label: 'Hari ini hujan', v: p.pyes, tip: `Hari ini hujan\n${fmt(p.pyes, 1)}% diikuti hujan besok\nn ${fmt(p.ty, 0)} hari`},
+                 {label: 'Hari ini tidak hujan', v: p.pno, tip: `Hari ini tidak hujan\n${fmt(p.pno, 1)}% diikuti hujan besok\nn ${fmt(p.tn, 0)} hari`}];
+  mount('c-pers', hbars(items.map(i => Object.assign(i, {showVal: true})), {max: 100, unit: '%', label: 'Peluang hujan besok menurut hujan hari ini', rh: 34, bh: 20, lw: 130, w: 760, minw: 420}),
+        ['Kondisi hari ini', '% hujan besok', 'n hari'], [['Hujan', fmt(p.pyes, 1), fmt(p.ty, 0)], ['Tidak hujan', fmt(p.pno, 1), fmt(p.tn, 0)]]);
+  $('persTxt').textContent = p.ratio == null ? '' : `Jika hari ini hujan, peluang hujan besok ${fmt(p.ratio, 2)} kali lebih besar daripada jika hari ini tidak hujan (${selName()}).`;
+}
+
+function renderRule(S) {
+  const rs = ruleAgg(D, S, state.season);
+  if (!rs.length) { $('res').innerHTML = ''; $('ins').textContent = 'Tidak ada data untuk pilihan ini.'; return; }
+  const sel = rs.find(r => r.th === state.th) || rs[0], xs = rs.map(r => r.th + '');
+  $('slo').textContent = state.th + '%'; $('sl').value = state.th;
+  $('res').innerHTML = `<div>Akurasi aturan (estimated)<b>${fmt(sel.acc, 1)}%</b></div><div>Baseline "selalu tidak hujan"<b>${fmt(sel.base, 1)}%</b></div>` +
+    `<div>Hari hujan tertangkap (recall)<b>${fmt(sel.recall, 1)}%</b></div><div>Hari dengan peringatan<b>${fmt(sel.warn, 1)}%</b></div>`;
+  const gap = sel.acc - sel.base;
+  $('ins').innerHTML = sel.recall == null
+    ? `Terlalu sedikit hari hujan (kurang dari 30) pada pilihan ini untuk menilai recall secara stabil. Akurasi ${fmt(sel.acc, 1)}% vs baseline ${fmt(sel.base, 1)}% tidak informatif karena hampir semua hari kering.`
+    : gap <= 0
+    ? `Pada ambang ${sel.th}%, akurasi <b>${fmt(sel.acc, 1)}%</b> justru <b>${fmt(Math.abs(gap), 1)} poin di bawah</b> baseline <b>${fmt(sel.base, 1)}%</b>, tetapi aturan menangkap <b>${fmt(sel.recall, 1)}%</b> hari hujan. Baseline menangkap 0% karena tidak pernah memberi peringatan.`
+    : `Pada ambang ${sel.th}%, akurasi <b>${fmt(sel.acc, 1)}%</b> hanya <b>${fmt(gap, 1)} poin</b> di atas baseline <b>${fmt(sel.base, 1)}%</b>, sementara hari hujan yang tertangkap baru <b>${fmt(sel.recall, 1)}%</b> dan ${fmt(sel.warn, 1)}% hari diberi peringatan. Akurasi saja tidak cukup untuk menilai aturan.`;
+  const hiX = rs.findIndex(r => r.th === sel.th);
+  const lg = (items) => `<div class="legend">${items.map(([c, t]) => `<span><i class="ln" style="background:${c}"></i>${t}</span>`).join('')}</div>`;
+  const all = rs.map(r => r.acc).concat(rs.map(r => r.base));
+  const accSvg = lineChart([{name: 'Akurasi aturan', color: C.s1, vals: rs.map(r => r.acc)}, {name: 'Baseline', color: C.s2, vals: rs.map(r => r.base)}], xs,
+    {min: Math.floor((Math.min(...all) - 3) / 10) * 10, max: Math.max(...all) + 3, unit: '%', label: 'Akurasi aturan dan baseline per ambang', w: 520, h: 250, hiX});
+  const el1 = $('c-acc'), t1 = el1.dataset.mode === 'table';
+  el1.innerHTML = lg([[C.s1, 'Akurasi aturan'], [C.s2, 'Baseline selalu tidak hujan']]) + `<div class="figw" ${t1 ? 'hidden' : ''}>${accSvg}</div><div class="tbl" ${t1 ? '' : 'hidden'}>${tableHTML(['Ambang', 'Akurasi', 'Baseline', 'Precision'], rs.map(r => [r.th + '%', fmt(r.acc, 1), fmt(r.base, 1), fmt(r.prec, 1)]))}</div>`;
+  const recSvg = lineChart([{name: 'Recall', color: C.s1, vals: rs.map(r => r.recall)}, {name: 'Hari bertanda peringatan', color: C.s2, vals: rs.map(r => r.warn)}], xs,
+    {min: 0, max: 100, unit: '%', label: 'Recall dan hari bertanda peringatan per ambang', w: 520, h: 250, hiX});
+  const el2 = $('c-rec'), t2 = el2.dataset.mode === 'table';
+  el2.innerHTML = lg([[C.s1, 'Recall (hari hujan tertangkap)'], [C.s2, 'Hari bertanda peringatan']]) + `<div class="figw" ${t2 ? 'hidden' : ''}>${recSvg}</div><div class="tbl" ${t2 ? '' : 'hidden'}>${tableHTML(['Ambang', 'Recall', 'Hari peringatan'], rs.map(r => [r.th + '%', fmt(r.recall, 1), fmt(r.warn, 1)]))}</div>`;
+  const pr = D.g.period.find(p => p[1] === sel.th);
+  $('periodTxt').textContent = pr ? `Cek kestabilan (semua lokasi, ambang ${sel.th}%): akurasi ${fmt(pr[2], 1)}% pada 2007-2012 dan ${fmt(pr[3], 1)}% pada 2013-2017; recall ${fmt(pr[4], 1)}% dan ${fmt(pr[5], 1)}%.` : '';
+}
+
+function renderSched(S) {
+  const by = {};
+  D.sched.forEach(r => { if (S.has(r[0])) (by[r[0]] || (by[r[0]] = [])).push(r); });
+  const rows = D.locs.filter(l => by[l[0]]).map(l => {
+    const a = by[l[0]].slice().sort((x, y) => x[3] - y[3] || x[1] - y[1]);
+    const dry = a.slice(0, 3), wet = a.slice(-3).reverse();
+    const f = arr => arr.map(r => `${MONTHS[r[1] - 1]} (${fmt(r[3], 0)}%)`).join(', ');
+    return [l[0], l[1], f(dry), f(wet), a[0][3], a[a.length - 1][3]];
+  });
+  const el = $('c-sched');
+  el.dataset.mode = '';
+  el.innerHTML = `<div class="tbl" style="max-height:520px"><table><thead><tr><th>Lokasi</th><th>Zona</th><th>Paling kering</th><th>Paling basah</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`).join('') + `</tbody></table></div>`;
+}
+
+function renderQuality() {
+  const ms = D.g.missing.slice(0, 12);
+  mount('c-miss', hbars(ms.map(r => ({label: r[0] + (r[3] ? '' : ' *'), v: r[1], showVal: true, fill: r[3] ? C.s1 : C.s1light,
+    tip: `${r[0]}\n${fmt(r[1], 1)}% kosong\n${r[2]} lokasi tidak mencatat sama sekali\n${r[3] ? 'Dipakai di analisis' : 'Tidak dipakai di analisis'}`})), {max: 60, unit: '%', label: 'Persentase nilai kosong per kolom', rh: 20, bh: 12, lw: 116, w: 520}),
+        ['Kolom', '% kosong', 'Lokasi tidak mencatat', 'Dipakai'], ms.map(r => [r[0], fmt(r[1], 1), r[2], r[3] ? 'ya' : 'tidak']));
+  $('missTxt').textContent = 'Biru tua = kolom dipakai analisis, biru muda dengan tanda * = tidak dipakai. ' + D.g.missNote;
+  const sens = D.g.sens;
+  $('c-sens').innerHTML = `<table><thead><tr><th>Ukuran</th><th class="num">A: dibuang</th><th class="num">B: diisi</th><th class="num">Selisih relatif</th><th>Status</th></tr></thead><tbody>` +
+    sens.map(r => `<tr><td>${esc(r[0])}</td><td class="num">${fmt(r[1], 2)}</td><td class="num">${fmt(r[2], 2)}</td><td class="num">${fmt(r[3], 1)}%</td><td>${r[4] ? '<span class="pill warn">&#9888; dicermati</span>' : '<span class="pill ok">&#10003; stabil</span>'}</td></tr>`).join('') + '</tbody></table>';
+  $('xcheck').innerHTML = D.g.xcheck;
+  $('foot').textContent = D.g.footer;
+}
+
+function render() {
+  const S = selSet();
+  renderKPIs(S); renderHeat(S); renderSeason(S); renderWetDry(S); renderTrend(S);
+  renderRank(S); renderScatter(S); renderCond(S); renderPers(S); renderRule(S); renderSched(S);
+}
+
+/* ---------- interaksi ---------- */
+const tip = $('tip');
+document.addEventListener('mouseover', e => {
+  const t = e.target.closest('[data-tip]'); if (!t) return;
+  tip.textContent = t.dataset.tip; tip.style.display = 'block'; moveTip(e);
+});
+document.addEventListener('mousemove', e => { if (tip.style.display === 'block') moveTip(e); });
+document.addEventListener('mouseout', e => { if (e.target.closest && e.target.closest('[data-tip]')) tip.style.display = 'none'; });
+function moveTip(e) {
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, e.clientX + 14)) + 'px';
+  tip.style.top = (e.clientY + h + 24 > innerHeight ? e.clientY - h - 12 : e.clientY + 16) + 'px';
+}
+document.addEventListener('click', e => {
+  const r = e.target.closest('[data-click]');
+  if (r) { state.sel = r.dataset.click; $('selLoc').value = state.sel; render(); window.scrollTo({top: $('lokasi').offsetTop - 110, behavior: 'smooth'}); return; }
+  const b = e.target.closest('.tb'); if (!b) return;
+  const el = $(b.dataset.for); if (!el) return;
+  const showTable = el.dataset.mode !== 'table';
+  el.dataset.mode = showTable ? 'table' : '';
+  const fig = el.querySelector('.figw'), tb = el.querySelector('.tbl');
+  if (fig) fig.hidden = showTable; if (tb) tb.hidden = !showTable;
+  b.textContent = showTable ? 'Grafik' : 'Tabel';
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') tip.style.display = 'none'; });
+$('sl').addEventListener('input', e => { state.th = +e.target.value; renderRule(selSet()); });
+
+/* ---------- mulai ---------- */
+$('tagData').textContent = D.g.tag;
+$('findings').innerHTML = D.g.findings.map(f => `<li>${f}</li>`).join('');
+buildFilters();
+render(); renderWind(); renderQuality();
+</script>
+</body>
+</html>

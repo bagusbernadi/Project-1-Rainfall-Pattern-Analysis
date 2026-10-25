@@ -1,0 +1,4 @@
+project/data/raw/
+project/weather.duckdb
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,7 @@
+column_name,n_missing,pct_rain_tomorrow_if_missing,pct_rain_tomorrow_if_present,diff_pp
+Humidity3pm,3610,26.7,22.31,4.4
+Pressure3pm,13981,22.27,22.43,-0.17
+Sunshine,67816,22.2,22.62,-0.41
+Cloud3pm,57094,20.3,23.84,-3.54
+WindGustDir,9330,26.44,22.14,4.31
+WindGustSpeed,9270,26.34,22.14,4.2

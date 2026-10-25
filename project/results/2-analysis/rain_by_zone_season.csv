@@ -1,0 +1,21 @@
+climate_zone,season,n_locations,n_obs,rain_days,pct_rain
+Barat daya,Autumn,6,4704,1031,21.92
+Barat daya,Spring,6,4276,1111,25.98
+Barat daya,Summer,6,4311,371,8.61
+Barat daya,Winter,6,4460,1934,43.36
+Pedalaman kering,Autumn,8,5586,572,10.24
+Pedalaman kering,Spring,8,5053,556,11.0
+Pedalaman kering,Summer,8,5006,597,11.93
+Pedalaman kering,Winter,8,5273,658,12.48
+Pesisir timur,Autumn,13,10158,2782,27.39
+Pesisir timur,Spring,13,9424,2027,21.51
+Pesisir timur,Summer,13,9275,2557,27.57
+Pesisir timur,Winter,13,9805,2236,22.8
+Tenggara sedang,Autumn,18,14113,3053,21.63
+Tenggara sedang,Spring,18,13249,3213,24.25
+Tenggara sedang,Summer,18,13071,2169,16.59
+Tenggara sedang,Winter,18,13661,4426,32.4
+Tropis utara,Autumn,4,2838,745,26.25
+Tropis utara,Spring,4,2610,429,16.44
+Tropis utara,Summer,4,2591,1233,47.59
+Tropis utara,Winter,4,2735,180,6.58

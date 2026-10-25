@@ -1,0 +1,1030 @@
+Location,column_name,null_pct,n_rows,decision_code,decision
+Adelaide,MinTemp,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,MaxTemp,0.09,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Rainfall,3.19,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Adelaide,Evaporation,46.63,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Sunshine,44.6,3193,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Adelaide,WindGustDir,0.81,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Adelaide,WindGustSpeed,0.81,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Adelaide,WindDir9am,8.58,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,WindDir3pm,0.5,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,WindSpeed9am,0.16,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,WindSpeed3pm,0.16,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Humidity9am,0.16,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Humidity3pm,0.16,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Adelaide,Pressure9am,0.25,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Pressure3pm,0.22,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Adelaide,Cloud9am,100.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Cloud3pm,100.0,3193,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Adelaide,Temp9am,0.16,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,Temp3pm,0.13,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Adelaide,RainToday,3.19,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Adelaide,RainTomorrow,3.23,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Albany,MinTemp,2.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,MaxTemp,1.78,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Rainfall,0.79,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Albany,Evaporation,9.54,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Sunshine,17.11,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Albany,WindGustDir,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Albany,WindGustSpeed,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Albany,WindDir9am,8.12,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,WindDir3pm,25.76,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,WindSpeed9am,2.01,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,WindSpeed3pm,24.11,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Humidity9am,1.61,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Humidity3pm,23.55,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Albany,Pressure9am,0.82,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Pressure3pm,0.82,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Albany,Cloud9am,1.25,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Cloud3pm,23.39,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Albany,Temp9am,1.28,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,Temp3pm,23.42,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albany,RainToday,0.79,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Albany,RainTomorrow,0.79,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Albury,MinTemp,0.36,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,MaxTemp,0.36,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Rainfall,0.95,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Albury,Evaporation,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Albury,WindGustDir,1.05,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Albury,WindGustSpeed,1.05,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Albury,WindDir9am,17.27,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,WindDir3pm,1.51,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,WindSpeed9am,0.3,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,WindSpeed3pm,0.36,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Humidity9am,0.3,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Humidity3pm,0.26,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Albury,Pressure9am,0.16,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Pressure3pm,0.26,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Albury,Cloud9am,57.6,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Cloud3pm,53.06,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Albury,Temp9am,0.3,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,Temp3pm,0.26,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Albury,RainToday,0.95,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Albury,RainTomorrow,0.95,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+AliceSprings,MinTemp,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,MaxTemp,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Rainfall,0.26,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+AliceSprings,Evaporation,7.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Sunshine,17.11,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+AliceSprings,WindGustDir,1.68,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+AliceSprings,WindGustSpeed,1.68,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+AliceSprings,WindDir9am,7.57,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,WindDir3pm,0.13,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,WindSpeed9am,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,WindSpeed3pm,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Humidity9am,0.1,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Humidity3pm,0.16,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+AliceSprings,Pressure9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Pressure3pm,0.1,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+AliceSprings,Cloud9am,10.99,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Cloud3pm,11.88,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+AliceSprings,Temp9am,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,Temp3pm,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+AliceSprings,RainToday,0.26,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+AliceSprings,RainTomorrow,0.3,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+BadgerysCreek,MinTemp,1.2,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,MaxTemp,0.96,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Rainfall,2.69,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+BadgerysCreek,Evaporation,100.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Sunshine,100.0,3009,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+BadgerysCreek,WindGustDir,2.53,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+BadgerysCreek,WindGustSpeed,2.53,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+BadgerysCreek,WindDir9am,14.46,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,WindDir3pm,2.82,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,WindSpeed9am,1.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,WindSpeed3pm,1.6,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Humidity9am,1.79,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Humidity3pm,1.83,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+BadgerysCreek,Pressure9am,5.58,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Pressure3pm,5.75,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+BadgerysCreek,Cloud9am,100.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Cloud3pm,100.0,3009,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+BadgerysCreek,Temp9am,1.36,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,Temp3pm,1.46,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+BadgerysCreek,RainToday,2.69,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+BadgerysCreek,RainTomorrow,2.69,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Ballarat,MinTemp,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,MaxTemp,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Rainfall,0.39,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Ballarat,Evaporation,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Ballarat,WindGustDir,1.02,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Ballarat,WindGustSpeed,1.02,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Ballarat,WindDir9am,2.99,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,WindDir3pm,0.59,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,WindSpeed9am,0.26,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,WindSpeed3pm,0.13,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Humidity9am,0.69,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Humidity3pm,0.23,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Ballarat,Pressure9am,0.79,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Pressure3pm,0.86,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Ballarat,Cloud9am,17.96,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Cloud3pm,34.47,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Ballarat,Temp9am,0.39,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,Temp3pm,0.2,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Ballarat,RainToday,0.39,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Ballarat,RainTomorrow,0.39,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Bendigo,MinTemp,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,MaxTemp,0.16,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Rainfall,0.2,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Bendigo,Evaporation,61.02,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Bendigo,WindGustDir,1.35,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Bendigo,WindGustSpeed,1.32,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Bendigo,WindDir9am,8.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,WindDir3pm,1.41,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,WindSpeed9am,0.13,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,WindSpeed3pm,0.13,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Humidity9am,0.23,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Humidity3pm,0.07,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Bendigo,Pressure9am,0.49,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Pressure3pm,0.33,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Bendigo,Cloud9am,31.84,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Cloud3pm,25.39,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Bendigo,Temp9am,0.1,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,Temp3pm,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Bendigo,RainToday,0.2,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Bendigo,RainTomorrow,0.2,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Brisbane,MinTemp,0.28,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,MaxTemp,0.44,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Rainfall,1.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Brisbane,Evaporation,0.6,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Sunshine,1.53,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Brisbane,WindGustDir,1.28,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Brisbane,WindGustSpeed,1.28,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Brisbane,WindDir9am,2.19,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,WindDir3pm,1.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,WindSpeed9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,WindSpeed3pm,0.25,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Humidity9am,0.13,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Humidity3pm,0.47,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Brisbane,Pressure9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Pressure3pm,0.25,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Brisbane,Cloud9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Cloud3pm,0.06,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Brisbane,Temp9am,0.13,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,Temp3pm,0.47,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Brisbane,RainToday,1.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Brisbane,RainTomorrow,1.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Cairns,MinTemp,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,MaxTemp,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Rainfall,1.71,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Cairns,Evaporation,12.17,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Sunshine,15.66,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cairns,WindGustDir,0.62,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Cairns,WindGustSpeed,0.59,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Cairns,WindDir9am,1.41,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,WindDir3pm,0.13,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,WindSpeed9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,WindSpeed3pm,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Humidity9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Humidity3pm,0.0,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cairns,Pressure9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Pressure3pm,0.0,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cairns,Cloud9am,6.81,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Cloud3pm,7.57,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cairns,Temp9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,Temp3pm,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cairns,RainToday,1.71,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Cairns,RainTomorrow,1.71,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Canberra,MinTemp,0.17,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,MaxTemp,0.09,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Rainfall,0.52,3436,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Canberra,Evaporation,46.68,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Sunshine,55.73,3436,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Canberra,WindGustDir,9.87,3436,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Canberra,WindGustSpeed,9.81,3436,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Canberra,WindDir9am,15.75,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,WindDir3pm,6.64,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,WindSpeed9am,6.66,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,WindSpeed3pm,6.49,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Humidity9am,1.83,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Humidity3pm,0.35,3436,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Canberra,Pressure9am,6.58,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Pressure3pm,6.43,3436,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Canberra,Cloud9am,31.2,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Cloud3pm,36.76,3436,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Canberra,Temp9am,0.52,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,Temp3pm,0.2,3436,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Canberra,RainToday,0.52,3436,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Canberra,RainTomorrow,0.52,3436,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Cobar,MinTemp,0.2,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,MaxTemp,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Rainfall,0.7,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Cobar,Evaporation,11.4,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Sunshine,81.72,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Cobar,WindGustDir,1.4,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Cobar,WindGustSpeed,1.4,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Cobar,WindDir9am,0.9,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,WindDir3pm,0.5,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,WindSpeed9am,0.56,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,WindSpeed3pm,0.4,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Humidity9am,4.15,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Humidity3pm,4.15,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cobar,Pressure9am,1.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Pressure3pm,0.86,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cobar,Cloud9am,12.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Cloud3pm,10.24,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Cobar,Temp9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,Temp3pm,0.23,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Cobar,RainToday,0.7,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Cobar,RainTomorrow,0.7,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+CoffsHarbour,MinTemp,0.5,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,MaxTemp,0.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Rainfall,1.86,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+CoffsHarbour,Evaporation,40.68,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Sunshine,50.35,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+CoffsHarbour,WindGustDir,11.93,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+CoffsHarbour,WindGustSpeed,11.93,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+CoffsHarbour,WindDir9am,11.53,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,WindDir3pm,10.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,WindSpeed9am,9.84,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,WindSpeed3pm,9.8,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Humidity9am,0.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Humidity3pm,0.73,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+CoffsHarbour,Pressure9am,10.34,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Pressure3pm,10.37,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+CoffsHarbour,Cloud9am,27.02,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Cloud3pm,25.86,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+CoffsHarbour,Temp9am,0.5,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,Temp3pm,0.47,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+CoffsHarbour,RainToday,1.86,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+CoffsHarbour,RainTomorrow,1.86,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Dartmoor,MinTemp,2.29,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,MaxTemp,2.09,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Rainfall,2.23,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Dartmoor,Evaporation,13.59,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Sunshine,14.72,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Dartmoor,WindGustDir,2.29,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Dartmoor,WindGustSpeed,2.29,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Dartmoor,WindDir9am,18.88,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,WindDir3pm,3.26,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,WindSpeed9am,2.19,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,WindSpeed3pm,2.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Humidity9am,7.58,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Humidity3pm,7.48,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Dartmoor,Pressure9am,2.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Pressure3pm,2.16,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Dartmoor,Cloud9am,100.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Cloud3pm,100.0,3009,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Dartmoor,Temp9am,2.16,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,Temp3pm,2.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Dartmoor,RainToday,2.23,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Dartmoor,RainTomorrow,2.19,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Darwin,MinTemp,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,MaxTemp,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Rainfall,0.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Darwin,Evaporation,1.69,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Sunshine,0.13,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Darwin,WindGustDir,1.44,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Darwin,WindGustSpeed,1.32,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Darwin,WindDir9am,0.88,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,WindDir3pm,0.09,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,WindSpeed9am,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,WindSpeed3pm,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Humidity9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Humidity3pm,0.06,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Darwin,Pressure9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Pressure3pm,0.06,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Darwin,Cloud9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Cloud3pm,0.09,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Darwin,Temp9am,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,Temp3pm,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Darwin,RainToday,0.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Darwin,RainTomorrow,0.03,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+GoldCoast,MinTemp,0.1,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,MaxTemp,0.23,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Rainfall,1.97,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+GoldCoast,Evaporation,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+GoldCoast,WindGustDir,3.95,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+GoldCoast,WindGustSpeed,3.95,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+GoldCoast,WindDir9am,2.14,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,WindDir3pm,1.15,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,WindSpeed9am,1.32,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,WindSpeed3pm,1.02,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Humidity9am,0.46,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Humidity3pm,0.39,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+GoldCoast,Pressure9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Pressure3pm,0.03,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+GoldCoast,Cloud9am,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Cloud3pm,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+GoldCoast,Temp9am,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,Temp3pm,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+GoldCoast,RainToday,1.97,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+GoldCoast,RainTomorrow,1.97,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Hobart,MinTemp,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,MaxTemp,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Rainfall,0.16,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Hobart,Evaporation,0.22,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Sunshine,0.44,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Hobart,WindGustDir,0.72,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Hobart,WindGustSpeed,0.72,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Hobart,WindDir9am,1.28,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,WindDir3pm,0.63,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,WindSpeed9am,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,WindSpeed3pm,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Humidity9am,0.31,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Humidity3pm,0.41,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Hobart,Pressure9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Pressure3pm,0.03,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Hobart,Cloud9am,36.42,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Cloud3pm,36.58,3193,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Hobart,Temp9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,Temp3pm,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Hobart,RainToday,0.16,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Hobart,RainTomorrow,0.16,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Katherine,MinTemp,3.11,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,MaxTemp,2.53,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Rainfall,1.14,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Katherine,Evaporation,5.89,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Sunshine,100.0,1578,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Katherine,WindGustDir,1.84,1578,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Katherine,WindGustSpeed,1.84,1578,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Katherine,WindDir9am,2.53,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,WindDir3pm,1.14,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,WindSpeed9am,0.06,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,WindSpeed3pm,0.38,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Humidity9am,5.13,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Humidity3pm,52.98,1578,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Katherine,Pressure9am,0.06,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Pressure3pm,0.32,1578,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Katherine,Cloud9am,2.6,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Cloud3pm,45.88,1578,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Katherine,Temp9am,2.66,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,Temp3pm,45.88,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Katherine,RainToday,1.14,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Katherine,RainTomorrow,1.2,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Launceston,MinTemp,0.2,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,MaxTemp,0.2,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Rainfall,0.39,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Launceston,Evaporation,95.36,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Launceston,WindGustDir,1.12,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Launceston,WindGustSpeed,1.09,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Launceston,WindDir9am,15.13,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,WindDir3pm,1.84,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,WindSpeed9am,0.16,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,WindSpeed3pm,0.36,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Humidity9am,0.2,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Humidity3pm,0.33,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Launceston,Pressure9am,37.93,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Pressure3pm,37.93,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Launceston,Cloud9am,76.15,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Cloud3pm,75.59,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Launceston,Temp9am,0.2,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,Temp3pm,0.33,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Launceston,RainToday,0.39,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Launceston,RainTomorrow,0.39,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Melbourne,MinTemp,15.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,MaxTemp,15.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Rainfall,23.74,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Melbourne,Evaporation,0.09,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Sunshine,0.03,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Melbourne,WindGustDir,0.44,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Melbourne,WindGustSpeed,0.44,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Melbourne,WindDir9am,1.57,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,WindDir3pm,0.38,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,WindSpeed9am,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,WindSpeed3pm,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Humidity9am,15.1,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Humidity3pm,15.25,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Melbourne,Pressure9am,15.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Pressure3pm,15.13,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Melbourne,Cloud9am,32.38,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Cloud3pm,34.64,3193,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Melbourne,Temp9am,15.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,Temp3pm,15.16,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Melbourne,RainToday,23.74,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Melbourne,RainTomorrow,23.74,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MelbourneAirport,MinTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Rainfall,0.0,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MelbourneAirport,Evaporation,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Sunshine,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MelbourneAirport,WindGustDir,0.5,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+MelbourneAirport,WindGustSpeed,0.5,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+MelbourneAirport,WindDir9am,1.33,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,WindDir3pm,0.43,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,WindSpeed9am,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,WindSpeed3pm,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Humidity9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Humidity3pm,0.3,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MelbourneAirport,Pressure9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Pressure3pm,0.0,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MelbourneAirport,Cloud9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Cloud3pm,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MelbourneAirport,Temp9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,Temp3pm,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MelbourneAirport,RainToday,0.0,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MelbourneAirport,RainTomorrow,0.0,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Mildura,MinTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Rainfall,0.07,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Mildura,Evaporation,3.89,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Sunshine,4.42,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Mildura,WindGustDir,0.17,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Mildura,WindGustSpeed,0.17,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Mildura,WindDir9am,3.06,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,WindDir3pm,0.3,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,WindSpeed9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,WindSpeed3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Humidity9am,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Humidity3pm,0.13,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Mildura,Pressure9am,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Pressure3pm,0.07,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Mildura,Cloud9am,2.79,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Cloud3pm,4.92,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Mildura,Temp9am,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,Temp3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Mildura,RainToday,0.07,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Mildura,RainTomorrow,0.07,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Moree,MinTemp,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Rainfall,5.15,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Moree,Evaporation,23.83,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Sunshine,31.7,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Moree,WindGustDir,2.59,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Moree,WindGustSpeed,2.56,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Moree,WindDir9am,3.59,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,WindDir3pm,1.83,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,WindSpeed9am,1.36,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,WindSpeed3pm,1.36,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Humidity9am,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Humidity3pm,0.17,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Moree,Pressure9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Pressure3pm,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Moree,Cloud9am,17.88,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Cloud3pm,13.43,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Moree,Temp9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,Temp3pm,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Moree,RainToday,5.15,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Moree,RainTomorrow,5.15,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MountGambier,MinTemp,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,MaxTemp,0.16,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Rainfall,0.3,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MountGambier,Evaporation,13.49,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Sunshine,14.57,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MountGambier,WindGustDir,1.74,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+MountGambier,WindGustSpeed,1.71,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+MountGambier,WindDir9am,2.76,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,WindDir3pm,0.59,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,WindSpeed9am,0.3,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,WindSpeed3pm,0.33,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Humidity9am,0.39,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Humidity3pm,0.33,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MountGambier,Pressure9am,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Pressure3pm,0.16,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MountGambier,Cloud9am,3.62,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Cloud3pm,3.62,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MountGambier,Temp9am,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,Temp3pm,0.16,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGambier,RainToday,0.3,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MountGambier,RainTomorrow,0.33,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MountGinini,MinTemp,2.99,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,MaxTemp,1.74,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Rainfall,4.38,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MountGinini,Evaporation,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+MountGinini,WindGustDir,10.49,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+MountGinini,WindGustSpeed,10.49,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+MountGinini,WindDir9am,8.22,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,WindDir3pm,7.63,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,WindSpeed9am,7.24,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,WindSpeed3pm,7.14,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Humidity9am,14.34,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Humidity3pm,10.23,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+MountGinini,Pressure9am,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Pressure3pm,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+MountGinini,Cloud9am,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Cloud3pm,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+MountGinini,Temp9am,13.78,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,Temp3pm,9.7,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+MountGinini,RainToday,4.38,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+MountGinini,RainTomorrow,4.38,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Newcastle,MinTemp,11.39,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,MaxTemp,7.73,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Rainfall,2.76,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Newcastle,Evaporation,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Sunshine,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Newcastle,WindGustDir,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Newcastle,WindGustSpeed,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Newcastle,WindDir9am,46.76,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,WindDir3pm,43.4,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,WindSpeed9am,8.39,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,WindSpeed3pm,31.23,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Humidity9am,7.86,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Humidity3pm,30.87,3039,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Newcastle,Pressure9am,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Pressure3pm,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Newcastle,Cloud9am,7.93,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Cloud3pm,30.7,3039,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Newcastle,Temp9am,7.7,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,Temp3pm,30.67,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Newcastle,RainToday,2.76,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Newcastle,RainTomorrow,2.76,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Nhil,MinTemp,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,MaxTemp,0.38,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Rainfall,0.57,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Nhil,Evaporation,100.0,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Sunshine,100.0,1578,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Nhil,WindGustDir,0.7,1578,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Nhil,WindGustSpeed,0.7,1578,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Nhil,WindDir9am,3.17,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,WindDir3pm,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,WindSpeed9am,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,WindSpeed3pm,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Humidity9am,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Humidity3pm,0.32,1578,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Nhil,Pressure9am,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Pressure3pm,0.32,1578,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Nhil,Cloud9am,100.0,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Cloud3pm,100.0,1578,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Nhil,Temp9am,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,Temp3pm,0.32,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nhil,RainToday,0.57,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Nhil,RainTomorrow,0.57,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+NorahHead,MinTemp,1.0,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,MaxTemp,1.0,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Rainfall,2.5,3004,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+NorahHead,Evaporation,100.0,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Sunshine,100.0,3004,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+NorahHead,WindGustDir,1.8,3004,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+NorahHead,WindGustSpeed,1.8,3004,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+NorahHead,WindDir9am,3.56,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,WindDir3pm,1.6,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,WindSpeed9am,1.33,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,WindSpeed3pm,1.1,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Humidity9am,1.33,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Humidity3pm,1.07,3004,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+NorahHead,Pressure9am,1.13,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Pressure3pm,0.87,3004,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+NorahHead,Cloud9am,100.0,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Cloud3pm,100.0,3004,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+NorahHead,Temp9am,1.33,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,Temp3pm,1.03,3004,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorahHead,RainToday,2.5,3004,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+NorahHead,RainTomorrow,2.5,3004,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+NorfolkIsland,MinTemp,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,MaxTemp,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Rainfall,1.5,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+NorfolkIsland,Evaporation,7.78,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Sunshine,14.59,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+NorfolkIsland,WindGustDir,1.5,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+NorfolkIsland,WindGustSpeed,1.46,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+NorfolkIsland,WindDir9am,1.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,WindDir3pm,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,WindSpeed9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,WindSpeed3pm,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Humidity9am,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Humidity3pm,0.07,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+NorfolkIsland,Pressure9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Pressure3pm,0.07,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+NorfolkIsland,Cloud9am,2.19,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Cloud3pm,2.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+NorfolkIsland,Temp9am,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,Temp3pm,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+NorfolkIsland,RainToday,1.5,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+NorfolkIsland,RainTomorrow,1.5,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Nuriootpa,MinTemp,0.37,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,MaxTemp,0.3,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Rainfall,0.2,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Nuriootpa,Evaporation,4.05,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Sunshine,5.35,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Nuriootpa,WindGustDir,1.63,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Nuriootpa,WindGustSpeed,1.13,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Nuriootpa,WindDir9am,4.79,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,WindDir3pm,1.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,WindSpeed9am,0.66,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,WindSpeed3pm,0.86,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Humidity9am,0.33,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Humidity3pm,0.43,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Nuriootpa,Pressure9am,0.23,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Pressure3pm,0.27,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Nuriootpa,Cloud9am,4.22,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Cloud3pm,25.56,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Nuriootpa,Temp9am,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,Temp3pm,0.23,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Nuriootpa,RainToday,0.2,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Nuriootpa,RainTomorrow,0.23,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+PearceRAAF,MinTemp,0.73,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,MaxTemp,0.7,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Rainfall,8.21,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+PearceRAAF,Evaporation,100.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Sunshine,0.17,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PearceRAAF,WindGustDir,4.82,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+PearceRAAF,WindGustSpeed,4.82,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+PearceRAAF,WindDir9am,3.02,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,WindDir3pm,0.9,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,WindSpeed9am,0.66,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,WindSpeed3pm,0.86,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Humidity9am,0.66,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Humidity3pm,0.9,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PearceRAAF,Pressure9am,0.7,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Pressure3pm,0.93,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PearceRAAF,Cloud9am,34.66,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Cloud3pm,37.49,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+PearceRAAF,Temp9am,0.6,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,Temp3pm,0.86,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PearceRAAF,RainToday,8.21,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+PearceRAAF,RainTomorrow,8.21,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Penrith,MinTemp,0.92,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,MaxTemp,0.82,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Rainfall,2.47,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Penrith,Evaporation,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Sunshine,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Penrith,WindGustDir,2.14,3039,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Penrith,WindGustSpeed,2.14,3039,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Penrith,WindDir9am,18.39,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,WindDir3pm,2.44,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,WindSpeed9am,1.45,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,WindSpeed3pm,0.69,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Humidity9am,3.16,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Humidity3pm,2.27,3039,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Penrith,Pressure9am,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Pressure3pm,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Penrith,Cloud9am,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Cloud3pm,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Penrith,Temp9am,1.28,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,Temp3pm,0.66,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Penrith,RainToday,2.47,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Penrith,RainTomorrow,2.47,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Perth,MinTemp,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,MaxTemp,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Rainfall,0.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Perth,Evaporation,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Sunshine,0.16,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Perth,WindGustDir,0.16,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Perth,WindGustSpeed,0.16,3193,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Perth,WindDir9am,4.2,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,WindDir3pm,0.22,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,WindSpeed9am,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,WindSpeed3pm,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Humidity9am,0.28,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Humidity3pm,0.25,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Perth,Pressure9am,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Pressure3pm,0.03,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Perth,Cloud9am,0.06,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Cloud3pm,0.13,3193,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Perth,Temp9am,0.0,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,Temp3pm,0.03,3193,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Perth,RainToday,0.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Perth,RainTomorrow,0.0,3193,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+PerthAirport,MinTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Rainfall,0.0,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+PerthAirport,Evaporation,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Sunshine,0.17,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PerthAirport,WindGustDir,1.53,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+PerthAirport,WindGustSpeed,1.53,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+PerthAirport,WindDir9am,1.33,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,WindDir3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,WindSpeed9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,WindSpeed3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Humidity9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Humidity3pm,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PerthAirport,Pressure9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Pressure3pm,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PerthAirport,Cloud9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Cloud3pm,0.13,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+PerthAirport,Temp9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,Temp3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+PerthAirport,RainToday,0.0,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+PerthAirport,RainTomorrow,0.0,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Portland,MinTemp,0.3,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,MaxTemp,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Rainfall,0.43,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Portland,Evaporation,13.59,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Sunshine,14.72,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Portland,WindGustDir,1.16,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Portland,WindGustSpeed,1.16,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Portland,WindDir9am,2.33,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,WindDir3pm,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,WindSpeed9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,WindSpeed3pm,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Humidity9am,1.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Humidity3pm,0.43,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Portland,Pressure9am,0.4,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Pressure3pm,0.33,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Portland,Cloud9am,13.69,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Cloud3pm,17.25,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Portland,Temp9am,1.6,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,Temp3pm,0.4,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Portland,RainToday,0.43,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Portland,RainTomorrow,0.43,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Richmond,MinTemp,0.66,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,MaxTemp,0.47,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Rainfall,1.93,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Richmond,Evaporation,46.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Sunshine,100.0,3009,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Richmond,WindGustDir,1.89,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Richmond,WindGustSpeed,1.83,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Richmond,WindDir9am,28.35,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,WindDir3pm,3.86,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,WindSpeed9am,1.43,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,WindSpeed3pm,1.23,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Humidity9am,1.96,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Humidity3pm,1.99,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Richmond,Pressure9am,0.96,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Pressure3pm,1.16,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Richmond,Cloud9am,79.89,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Cloud3pm,80.66,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Richmond,Temp9am,1.33,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,Temp3pm,1.4,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Richmond,RainToday,1.93,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Richmond,RainTomorrow,1.93,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Sale,MinTemp,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,MaxTemp,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Rainfall,0.3,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Sale,Evaporation,39.05,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Sunshine,39.58,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Sale,WindGustDir,4.69,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Sale,WindGustSpeed,4.69,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Sale,WindDir9am,2.73,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,WindDir3pm,0.53,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,WindSpeed9am,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,WindSpeed3pm,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Humidity9am,0.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Humidity3pm,0.5,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sale,Pressure9am,0.47,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Pressure3pm,0.5,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sale,Cloud9am,11.9,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Cloud3pm,13.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sale,Temp9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,Temp3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sale,RainToday,0.3,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Sale,RainTomorrow,0.3,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+SalmonGums,MinTemp,1.37,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,MaxTemp,1.33,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Rainfall,1.53,3001,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+SalmonGums,Evaporation,100.0,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Sunshine,100.0,3001,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+SalmonGums,WindGustDir,2.8,3001,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+SalmonGums,WindGustSpeed,2.8,3001,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+SalmonGums,WindDir9am,3.3,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,WindDir3pm,2.6,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,WindSpeed9am,2.33,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,WindSpeed3pm,2.33,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Humidity9am,1.2,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Humidity3pm,1.2,3001,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+SalmonGums,Pressure9am,100.0,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Pressure3pm,100.0,3001,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+SalmonGums,Cloud9am,100.0,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Cloud3pm,100.0,3001,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+SalmonGums,Temp9am,1.2,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,Temp3pm,1.2,3001,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SalmonGums,RainToday,1.53,3001,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+SalmonGums,RainTomorrow,1.53,3001,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Sydney,MinTemp,0.12,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,MaxTemp,0.06,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Rainfall,0.21,3344,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Sydney,Evaporation,1.53,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Sunshine,0.48,3344,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sydney,WindGustDir,31.04,3344,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Sydney,WindGustSpeed,31.04,3344,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Sydney,WindDir9am,1.67,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,WindDir3pm,0.99,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,WindSpeed9am,0.78,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,WindSpeed3pm,0.75,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Humidity9am,0.45,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Humidity3pm,0.39,3344,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sydney,Pressure9am,0.63,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Pressure3pm,0.57,3344,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sydney,Cloud9am,16.99,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Cloud3pm,16.84,3344,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Sydney,Temp9am,0.15,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,Temp3pm,0.12,3344,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Sydney,RainToday,0.21,3344,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Sydney,RainTomorrow,0.21,3344,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+SydneyAirport,MinTemp,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Rainfall,0.13,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+SydneyAirport,Evaporation,1.53,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Sunshine,0.53,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+SydneyAirport,WindGustDir,1.69,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+SydneyAirport,WindGustSpeed,1.69,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+SydneyAirport,WindDir9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,WindDir3pm,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,WindSpeed9am,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,WindSpeed3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Humidity9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Humidity3pm,0.13,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+SydneyAirport,Pressure9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Pressure3pm,0.1,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+SydneyAirport,Cloud9am,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Cloud3pm,0.0,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+SydneyAirport,Temp9am,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,Temp3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+SydneyAirport,RainToday,0.13,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+SydneyAirport,RainTomorrow,0.13,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Townsville,MinTemp,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,MaxTemp,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Rainfall,0.23,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Townsville,Evaporation,2.99,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Sunshine,13.91,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Townsville,WindGustDir,0.76,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Townsville,WindGustSpeed,0.76,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Townsville,WindDir9am,4.05,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,WindDir3pm,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,WindSpeed9am,0.07,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,WindSpeed3pm,0.03,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Humidity9am,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Humidity3pm,0.0,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Townsville,Pressure9am,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Pressure3pm,0.0,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Townsville,Cloud9am,5.72,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Cloud3pm,9.11,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Townsville,Temp9am,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,Temp3pm,0.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Townsville,RainToday,0.23,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Townsville,RainTomorrow,0.23,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Tuggeranong,MinTemp,0.03,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,MaxTemp,0.13,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Rainfall,1.35,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Tuggeranong,Evaporation,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Sunshine,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Tuggeranong,WindGustDir,1.38,3039,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Tuggeranong,WindGustSpeed,1.38,3039,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Tuggeranong,WindDir9am,21.22,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,WindDir3pm,1.55,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,WindSpeed9am,0.76,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,WindSpeed3pm,0.66,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Humidity9am,0.66,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Humidity3pm,0.43,3039,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Tuggeranong,Pressure9am,0.49,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Pressure3pm,0.36,3039,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Tuggeranong,Cloud9am,100.0,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Cloud3pm,100.0,3039,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Tuggeranong,Temp9am,0.66,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,Temp3pm,0.43,3039,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Tuggeranong,RainToday,1.35,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Tuggeranong,RainTomorrow,1.35,3039,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Uluru,MinTemp,2.22,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,MaxTemp,0.44,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Rainfall,3.55,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Uluru,Evaporation,100.0,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Sunshine,100.0,1578,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Uluru,WindGustDir,3.42,1578,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Uluru,WindGustSpeed,3.42,1578,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Uluru,WindDir9am,4.18,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,WindDir3pm,2.09,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,WindSpeed9am,2.28,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,WindSpeed3pm,1.9,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Humidity9am,0.95,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Humidity3pm,0.25,1578,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Uluru,Pressure9am,0.63,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Pressure3pm,0.25,1578,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Uluru,Cloud9am,77.95,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Cloud3pm,73.57,1578,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Uluru,Temp9am,0.95,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,Temp3pm,0.25,1578,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Uluru,RainToday,3.55,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Uluru,RainTomorrow,3.61,1578,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+WaggaWagga,MinTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Rainfall,1.1,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+WaggaWagga,Evaporation,4.59,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Sunshine,14.42,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+WaggaWagga,WindGustDir,0.93,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+WaggaWagga,WindGustSpeed,0.93,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+WaggaWagga,WindDir9am,3.95,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,WindDir3pm,0.5,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,WindSpeed9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,WindSpeed3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Humidity9am,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Humidity3pm,0.0,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+WaggaWagga,Pressure9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Pressure3pm,0.0,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+WaggaWagga,Cloud9am,7.41,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Cloud3pm,5.75,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+WaggaWagga,Temp9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,Temp3pm,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+WaggaWagga,RainToday,1.1,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+WaggaWagga,RainTomorrow,1.1,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Walpole,MinTemp,1.16,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,MaxTemp,1.3,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Rainfall,6.22,3006,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Walpole,Evaporation,100.0,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Sunshine,100.0,3006,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Walpole,WindGustDir,3.93,3006,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Walpole,WindGustSpeed,2.86,3006,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Walpole,WindDir9am,9.51,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,WindDir3pm,2.73,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,WindSpeed9am,1.1,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,WindSpeed3pm,0.96,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Humidity9am,2.1,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Humidity3pm,2.0,3006,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Walpole,Pressure9am,0.93,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Pressure3pm,0.86,3006,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Walpole,Cloud9am,100.0,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Cloud3pm,100.0,3006,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Walpole,Temp9am,0.93,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,Temp3pm,0.86,3006,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Walpole,RainToday,6.22,3006,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Walpole,RainTomorrow,6.22,3006,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Watsonia,MinTemp,0.23,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,MaxTemp,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Rainfall,0.33,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Watsonia,Evaporation,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Sunshine,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Watsonia,WindGustDir,1.23,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Watsonia,WindGustSpeed,1.23,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Watsonia,WindDir9am,6.35,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,WindDir3pm,1.16,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,WindSpeed9am,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,WindSpeed3pm,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Humidity9am,0.47,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Humidity3pm,0.0,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Watsonia,Pressure9am,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Pressure3pm,0.0,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Watsonia,Cloud9am,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Cloud3pm,0.03,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Watsonia,Temp9am,0.47,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,Temp3pm,0.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Watsonia,RainToday,0.33,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Watsonia,RainTomorrow,0.33,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Williamtown,MinTemp,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,MaxTemp,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Rainfall,15.15,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Williamtown,Evaporation,35.33,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Sunshine,54.97,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Williamtown,WindGustDir,4.52,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Williamtown,WindGustSpeed,4.49,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Williamtown,WindDir9am,2.89,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,WindDir3pm,0.6,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,WindSpeed9am,0.56,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,WindSpeed3pm,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Humidity9am,0.27,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Humidity3pm,0.23,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Williamtown,Pressure9am,0.4,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Pressure3pm,0.37,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Williamtown,Cloud9am,20.01,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Cloud3pm,21.57,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Williamtown,Temp9am,0.17,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,Temp3pm,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Williamtown,RainToday,15.15,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Williamtown,RainTomorrow,15.15,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Witchcliffe,MinTemp,0.3,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,MaxTemp,0.2,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Rainfall,1.89,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Witchcliffe,Evaporation,100.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Sunshine,100.0,3009,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Witchcliffe,WindGustDir,1.13,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Witchcliffe,WindGustSpeed,1.1,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Witchcliffe,WindDir9am,8.31,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,WindDir3pm,0.63,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,WindSpeed9am,0.2,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,WindSpeed3pm,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Humidity9am,7.98,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Humidity3pm,7.78,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Witchcliffe,Pressure9am,4.45,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Pressure3pm,4.45,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Witchcliffe,Cloud9am,100.0,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Cloud3pm,100.0,3009,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Witchcliffe,Temp9am,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,Temp3pm,0.07,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Witchcliffe,RainToday,1.89,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Witchcliffe,RainTomorrow,1.89,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Wollongong,MinTemp,0.49,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,MaxTemp,0.36,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Rainfall,1.91,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Wollongong,Evaporation,100.0,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Sunshine,100.0,3040,not_recorded,"Lokasi tidak mencatat kolom ini sama sekali. Dikeluarkan dari analisis kolom ini, tidak diisi dari lokasi lain karena iklim antar lokasi berbeda."
+Wollongong,WindGustDir,1.58,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Wollongong,WindGustSpeed,1.58,3040,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Wollongong,WindDir9am,4.11,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,WindDir3pm,1.32,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,WindSpeed9am,1.05,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,WindSpeed3pm,0.95,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Humidity9am,0.95,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Humidity3pm,0.99,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Wollongong,Pressure9am,1.64,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Pressure3pm,0.62,3040,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Wollongong,Cloud9am,55.76,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Cloud3pm,53.39,3040,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Wollongong,Temp9am,0.95,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,Temp3pm,0.95,3040,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Wollongong,RainToday,1.91,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Wollongong,RainTomorrow,1.88,3040,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Woomera,MinTemp,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,MaxTemp,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Rainfall,0.6,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Woomera,Evaporation,14.59,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Sunshine,33.3,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Woomera,WindGustDir,1.3,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Woomera,WindGustSpeed,1.3,3009,complete_case,Dipakai pada baris terisi (hanya Q9). Tidak diimputasi.
+Woomera,WindDir9am,0.96,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,WindDir3pm,0.6,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,WindSpeed9am,0.13,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,WindSpeed3pm,0.2,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Humidity9am,0.43,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Humidity3pm,0.9,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Woomera,Pressure9am,0.37,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Pressure3pm,0.47,3009,complete_case,Dipakai pada baris terisi. Imputasi median lokasi x bulan diuji sebagai skenario pembanding (Q14).
+Woomera,Cloud9am,12.43,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Cloud3pm,21.9,3009,complete_case_report_n,"Dipakai pada baris terisi, jumlah baris dan lokasi ditampilkan. Imputasi median lokasi x bulan hanya di uji sensitivitas (Q14)."
+Woomera,Temp9am,0.03,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,Temp3pm,0.1,3009,unused,Tidak dipakai di analisis (tidak dibutuhkan Q1-Q15). Tetap ada di weather_raw.
+Woomera,RainToday,0.6,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.
+Woomera,RainTomorrow,0.63,3009,drop_rows,Baris kosong tidak dipakai pada analisis yang membutuhkan kolom ini (has_today / has_target). Tidak pernah diimputasi.

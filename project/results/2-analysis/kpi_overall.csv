@@ -1,0 +1,6 @@
+kpi_id,kpi,value,n
+K1,Frekuensi hari hujan (%),22.42,142199
+K2,Curah rata-rata per hari hujan (mm),10.27,31880
+K3,Selisih Humidity3pm: sebelum hujan - sebelum tidak hujan (poin %),22.289,138583
+K4,Rasio peluang hujan besok (hari ini hujan / hari ini tidak),3.056,140787
+K5,Recall aturan Humidity3pm >= 70 (%),51.12,138583

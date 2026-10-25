@@ -1,0 +1,5 @@
+variable,n_yes,n_no,mean_yes,mean_no,diff_yes_minus_no
+Cloud3pm,20288,64811,6.36,3.922,2.438
+Humidity3pm,30913,107670,68.8,46.511,22.289
+Pressure3pm,28764,99448,1012.301,1016.114,-3.813
+Sunshine,16821,57556,4.472,8.546,-4.075

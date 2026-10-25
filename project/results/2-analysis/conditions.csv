@@ -1,0 +1,9 @@
+variable,rain_tomorrow,n,n_locations,mean,p25,median,p75
+Cloud3pm,No,64811,37,3.922,1.0,4.0,7.0
+Cloud3pm,Yes,20288,37,6.36,6.0,7.0,8.0
+Humidity3pm,No,107670,49,46.511,33.0,47.0,60.0
+Humidity3pm,Yes,30913,49,68.8,57.0,70.0,84.0
+Pressure3pm,No,99448,45,1016.114,1011.5,1016.0,1020.6
+Pressure3pm,Yes,28764,45,1012.301,1007.4,1012.2,1017.2
+Sunshine,No,57556,30,8.546,6.6,9.4,11.0
+Sunshine,Yes,16821,30,4.472,1.4,4.3,7.1
