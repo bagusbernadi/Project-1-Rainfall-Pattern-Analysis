@@ -9,7 +9,7 @@ Sumber: https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
 3. Jalankan pipeline (lihat README utama).
 
 ## Yang perlu dicek sebelum publikasi
-- Lisensi (dicek 28 Oktober 2026): deskripsi dataset di Kaggle tidak menyatakan lisensi terbuka eksplisit. Hak cipta ada pada Bureau of Meteorology ("Copyright Commonwealth of Australia 2010, Bureau of Meteorology"). Ketentuan penggunaan ulang belum jelas, jadi anggap untuk penggunaan pribadi dan jangan publikasikan data mentahnya. Isi kolom License di sidebar Kaggle belum dicatat.
+- Lisensi (dicek 28 Oktober 2026): deskripsi dataset di Kaggle tidak menyatakan lisensi terbuka eksplisit. Hak cipta ada pada Bureau of Meteorology ("Copyright Commonwealth of Australia 2010, Bureau of Meteorology"). Ketentuan penggunaan ulang belum jelas, jadi anggap untuk penggunaan pribadi dan jangan publikasikan data mentahnya. Kolom License di sidebar Kaggle: "Other (specified in description)" (dicatat 28 Oktober 2026).
 - Data asli berasal dari Bureau of Meteorology (observasi harian), dikompilasi oleh Graham Williams (Rattle) dan diunggah di Kaggle oleh Joe Young. Cantumkan atribusi ini saat mempublikasikan hasil.
 
 ## File di folder ini
