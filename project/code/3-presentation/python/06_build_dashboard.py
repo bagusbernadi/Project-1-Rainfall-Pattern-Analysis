@@ -169,7 +169,7 @@ def main() -> None:
             "xcheck": xcheck,
             "footer": "Data: weatherAUS (Kaggle, 'Rain in Australia'), pengamatan Bureau of Meteorology Australia. "
                       "Semua angka dihitung dari data oleh SQL (DuckDB) dan dicek silang dengan pandas. "
-                      "Ketepatan aturan praktis berlabel estimated. Cek lisensi dataset sebelum dipublikasikan.",
+                      "Ketepatan aturan praktis berlabel estimated. Lisensi: tidak ada lisensi terbuka eksplisit; hak cipta Bureau of Meteorology (dicek 28 Oktober 2026).",
         },
     }
 

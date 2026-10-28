@@ -17,7 +17,7 @@
 Kapan dan di mana hujan paling sering terjadi, kondisi cuaca apa yang biasanya mendahului hujan, dan seberapa jauh aturan sederhana (Humidity3pm) bisa dipakai memberi peringatan hujan besok.
 
 ## 2. Data
-Kaggle "Rain in Australia" (weatherAUS), 145.460 baris, 23 kolom, 49 lokasi, 2007-11-01 sampai 2017-06-25. Hari hujan = `RainToday = Yes` (Rainfall > 1,0 mm). Cara memperoleh data dan catatan lisensi: `project/data/README.md`. File mentah tidak di-commit.
+Kaggle "Rain in Australia" (weatherAUS), 145.460 baris, 23 kolom, 49 lokasi, 2007-11-01 sampai 2017-06-25. Hari hujan = `RainToday = Yes` (Rainfall > 1,0 mm). Cara memperoleh data dan catatan lisensi (tidak ada lisensi terbuka eksplisit; hak cipta Bureau of Meteorology): `project/data/README.md`. File mentah tidak di-commit.
 
 ## 3. Analysis
 Pipeline: SQL (DuckDB) membuat tabel dan query, pandas menghitung ulang secara independen sebagai crosscheck, dashboard menghitung ulang KPI sesuai filter dari tabel hitungan.
